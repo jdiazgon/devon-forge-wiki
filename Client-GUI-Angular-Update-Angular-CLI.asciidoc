@@ -20,7 +20,7 @@ $ npm unistall -g @angular/cli
 $ npm install -g @angular/cli
 ----
 
-For **Windows users** the process is only a bit harder. Using the **devonfw bundled console**:
+For **Windows users** the process is only a bit harder. Open the **devonfw bundled console** and do as follows:
 
 [source, bash]
 ----
