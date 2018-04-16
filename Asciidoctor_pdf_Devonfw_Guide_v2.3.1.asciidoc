@@ -240,6 +240,8 @@ include::oasp4js-angular-i18n.asciidoc[]
 
 include::Client-GUI-Angular-a11y-accessibility.asciidoc[]
 
+include::Client-GUI-Angular-Update-Angular-CLI.asciidoc[]
+
 == Devon4Sencha
 
 === A Closer Look
