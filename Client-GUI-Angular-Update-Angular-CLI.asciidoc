@@ -12,7 +12,7 @@ There are constant updates for the official Angular framework dependencies. Thes
 
 == Angular CLI update guide
 
-For **Linux users** is as easy as update the global package:
+For **Linux users** is as easy as updating the global package:
 
 [source, bash] 
 ----
@@ -20,7 +20,7 @@ $ npm unistall -g @angular/cli
 $ npm install -g @angular/cli
 ----
 
-For **Windows users** the process is only a bit harder:
+For **Windows users** the process is only a bit harder. Using the **devonfw bundled console**:
 
 [source, bash]
 ----
