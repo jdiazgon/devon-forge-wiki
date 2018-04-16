@@ -32,7 +32,7 @@ $ npm install @angular/cli --no-save
 
 After following these steps you should have the latest Angular CLI version installed in your system. In order to check it run in the distribution console:
 
-NOTE: The following example was made at April 2018.
+NOTE: At the time of this writing, the Angular CLI is at 1.7.4 version.
 
 [source, bash]
 ----
