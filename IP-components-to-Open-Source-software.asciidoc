@@ -9,6 +9,7 @@ toc::[]
 == Steps to convert IP Software to Open Source Software 
 
 * Choose right *Open Source License* for repository. Add a file named `LICENSE` to the root of repository (you can also do that automatically when creating the repo on github). In practice, that means that the https://opensource.org/licenses/Apache-2.0[Apache License version 2.0] will be applied. In specific cases it might also be https://opensource.org/licenses/MIT[MIT License] (please discuss with the community before choosing anything else than ASL2.0 for code).
+* For Java Projects you also need to put the same license to your top-level `pom.xml` (full requirements can be found http://central.sonatype.org/pages/requirements.html[here]).
 * Add *NOTICE* to the root of repository. You can find here a https://www.apache.org/licenses/example-NOTICE.txt[sample file]. TODO (JH): We need more clarification here - what should we write about the code origin. This is still unclear from the example. Create such a file and add to a oasp/devonfw repo and link it here.
 * Add *copyright statement* to all source code file. For doing this there are multiple tools. We can use http://marketplace.eclipse.org/content/eclipse-copyright-generator[Eclipse Copyright Generator plugin] to do the same.
 ** This plugin adds a new Panel in the preferences (global or project based) with: `Menu > Windows > Preferences > General > Copyright`.
