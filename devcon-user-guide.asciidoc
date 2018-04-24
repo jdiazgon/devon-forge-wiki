@@ -30,7 +30,7 @@ However, if you want to install Devcon locally (Devcon can be used to get the la
 
 [source,bash]
 ----
-java -jar devcon.jar system install 
+java -jar devcon.jar system installDevcon 
 ----
 
 This will install the devcon binaries to a folder _'.devcon'_ in your _'%HOME%'_ directory. Devcon is now added to the _'%PATH%'_ environment variable on your system, allowing it to execute directly from the console. However, after devcon installation on Windows, you need to close the console and reopen it in order to work the environment variables (only for the first time).
