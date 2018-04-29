@@ -14,7 +14,6 @@ toc::[]
 * Add *copyright statement* to all source code file. You can copy it from https://github.com/devonfw/devon/blob/develop/modules/SpringData/src/main/java/com/capgemini/devonfw/module/common/GenericRepository.java[this example]. For doing this there are multiple tools. We can use http://marketplace.eclipse.org/content/eclipse-copyright-generator[Eclipse Copyright Generator plugin] to do the same.
 ** This plugin adds a new Panel in the preferences (global or project based) with: `Menu > Windows > Preferences > General > Copyright`.
 ** A Menu `Menu > Project > Apply Copyright`. This wizard provide a lot of options and some default template for Open-Source licence. 
-** TODO (JH): Rather than the tooling I care about the exact text that should go there. Lets define this exactly before applying to tons of code-files!
 * Change copyright footer to include https://creativecommons.org/licenses/[Creative Commons License (Attribution-NoDerivatives 4.0 International)]. Copy text from https://github.com/oasp-forge/oasp4j-wiki/wiki/_Footer/_edit[here].
 * All source files should be *consistent* - follow same pattern for any usage so new contributor will follow the same.
 * Make a list of libraries with its versions and license type. Check if license are fitting requirement for open source. 
