@@ -16,8 +16,8 @@ toc::[]
 ** A Menu `Menu > Project > Apply Copyright`. This wizard provide a lot of options and some default template for Open-Source licence. 
 * Change copyright footer in the wiki (if present) to include https://creativecommons.org/licenses/[Creative Commons License (Attribution-NoDerivatives 4.0 International)]. Copy text from https://github.com/oasp-forge/oasp4j-wiki/wiki/_Footer/_edit[here].
 * All source files should be *consistent* - follow same pattern for any usage so new contributor will follow the same.
-* Make a list of libraries with its versions and license type. Check if license are fitting requirement for open source. 
-* Create a document with any prerequisite setup. Also include examples wherever necessary.
+* Make a list of all dependencies (libraries) including transitive dependencies with its versions and licenses. Verify that these licenses are fitting the requirements for open source and comply with your license (see above). 
+* Create a document with any prerequisite setup (`Readme.adoc` file in repository root). Also include examples wherever necessary.
 * Add a https://github.com/devonfw/devon-guide/wiki/Contributing-Code-of-Conduct[Code Of Conduct]. TODO (JH): Do we need that per repository or should we simply create a CoC for entire devonfw?
 * Add a https://github.com/devonfw/devon-guide/wiki/Contributing-Code[Contributing Guide] that gathers the following points: 
 	1. How other developers can contribute to the project?
