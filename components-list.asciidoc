@@ -34,7 +34,7 @@ toc::[]
 |Oasp4js		| - - -
 |=======================
 
-.IP Modules
+.Modules
 [options="header,footer"]
 |=======================
 |IP Module|Version        |Description

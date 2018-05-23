@@ -334,7 +334,7 @@ This command downloads the distribution
  -path       a location for the Devon distribution download
  -type       the type of the distribution, the options are:
              'oaspide' to download OASP IDE
-             'devondist' to download Devon IP IDE
+             'devondist' to download Devon IDE
  -user       a user with permissions to download the Devon distribution
 ----
 

@@ -180,9 +180,9 @@ If the project is already imported in Eclipse then update the project:
 Right click on project > Maven > Update Project > check the Force update of Snapshot/Releases checkbox > Ok
 ====
 
-===== How to install the Devon IP Modules?
+===== How to install the Devon Modules?
 
-If you have any problems resolving the dependencies or accessing to the Devon IP modules, you can install them directly in your distribution. To achieve that, you only need to open a distribution console launching the 'console.bat' script and then go to following path `workspaces\examples\devon\modules` and use the _install_ command of _Maven_.
+If you have any problems resolving the dependencies or accessing to the Devon modules, you can install them directly in your distribution. To achieve that, you only need to open a distribution console launching the 'console.bat' script and then go to following path `workspaces\examples\devon\modules` and use the _install_ command of _Maven_.
 
 [source,batch]
 ----
@@ -206,7 +206,7 @@ D:\Devon-dist\workspaces\examples\devon\modules>mvn install
 [INFO] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 ----
 
-This command will install the available Devon IP modules of your distribution locally, so you will be able to start using them on your Devon application.
+This command will install the available Devon modules of your distribution locally, so you will be able to start using them on your Devon application.
 
 ===== _Address is invalid on the local machine, or port is not valid on remote machine_ error
 

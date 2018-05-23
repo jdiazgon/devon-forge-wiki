@@ -123,9 +123,9 @@ A new version of Devcon has been released. Fixes and new features include:
 * New menu has been added - “other modules”, if menus are more than 10, other modules will display some menus.
 * A progress bar has been added for installing the distribution
 
-=== Devonfw IP Modules
+=== Devonfw Modules
 
-Existing devonfw IP modules can now be accessed with the help of starters following namespace devonfw-<module_name>-starter. Starters available for modules:
+Existing devonfw modules can now be accessed with the help of starters following namespace devonfw-<module_name>-starter. Starters available for modules:
 
 * Reporting module
 * WinAuth AD Module

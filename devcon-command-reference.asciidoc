@@ -101,7 +101,7 @@ The _init_ parameter needs one parameter to work properly:
 ==== dist s2
 
 The _s2_ command has been developed to automate the configuration process to use Devon as a Shared Service. This configuration is based on launching two scripts included in the Devon distributions, the _s2-init.bat_ and the _s2-create.bat_.
-The _*s2-init.bat*_ is responsible for configuring the _settings.xml_ file (located in the _conf/.m2_ directory). Basically enables the connection of _Maven_ with the _Artifactory_ repository, where the Devon IP modules are stored, and adds the user credentials for this connection.
+The _*s2-init.bat*_ is responsible for configuring the _settings.xml_ file (located in the _conf/.m2_ directory). Basically enables the connection of _Maven_ with the _Artifactory_ repository, where the Devon modules are stored, and adds the user credentials for this connection.
 
 The _*s2-create.bat*_ creates a new project in the workspace of the distribution, and optionally does a checkout of a Subversion repository inside this new project. Finally the script creates a Eclipse _.bat_ starter related to the new project.
 
