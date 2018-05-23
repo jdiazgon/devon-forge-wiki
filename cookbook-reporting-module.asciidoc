@@ -26,7 +26,7 @@ Include the starter in your pom.xml, verify that the _version_ matches the last 
 [source,xml]
 ----
 <dependency>
-   <groupId>com.capgemini.devonfw.starter</groupId>
+   <groupId>com.devonfw.starter</groupId>
    <artifactId>devonfw-reporting-starter</artifactId>
    <version>${devonfw.version}</version>
 </dependency>
@@ -56,7 +56,7 @@ First and foremost, you need to add the scanner for dependency injection. To do 
 [source,java]
 ----
 @Configuration
-@ComponentScan(basePackages = { "com.capgemini.devonfw.module.reporting" })
+@ComponentScan(basePackages = { "com.devonfw.module.reporting" })
 @EnableAutoConfiguration
 public class MyBootApp {
 
@@ -68,7 +68,7 @@ Remember to include the package of the module in the _basePackages_ attribute of
 
 [source,java]
 ----
-@ComponentScan(basePackages = { "com.capgemini.devonfw.module.reporting" , "my.other.component.location.package" })
+@ComponentScan(basePackages = { "com.devonfw.module.reporting" , "my.other.component.location.package" })
 ----
 
 As you can see, the _basePackages_ of the _@ComponentScan_ points to the Reporting module package. Now, you can start using the module.

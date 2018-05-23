@@ -16,7 +16,7 @@ In the synchronous request/response processing model, client connection is accep
 
 The idea behind the asynchronous processing model is to separate connection acceptance and request processing operations. Technically, it means to allocate two different threads, one to accept the client connection (acceptor) and the other to handle heavy and time consuming operations (worker) releasing the first one.
 
-=== The async IP module
+=== The async module
 The above concept is implemented in Devonfw through the _async module_. Therefore, you can include it in your project and will be able to apply the async process of requests in the REST services of your apps in a few steps, avoiding the complex details of the implementation.
 
 ==== Adding the async starter to your project
@@ -25,17 +25,11 @@ To access the functionality of the _async module_, you will need to include its 
 [source,xml]
 ----
 <dependency>
-      <groupId>com.capgemini.devonfw.starter</groupId>
+      <groupId>com.devonfw.starter</groupId>
       <artifactId>devonfw-async-starter</artifactId>
       <version>${devonfw.version}</version>
 </dependency>
 ----
-
-[WARNING]
-====
-The IP modules of Devonfw are stored in https://www.jfrog.com/artifactory/[Artifactory]. In case, you do not have access to that repository, as the modules are included in the Devonfw distribution, you can install them manually. To do so, open a Devonfw command line (_console.bat_), go to `Devon-dist\workspaces\examples\devon\modules` and execute the command `mvn install`.
-If the project is already imported in Eclipse then update project: Right click on _project_ > _Maven_ > _Update Project_ > check the _Force update of Snapshot/Releases_ checkbox > _Ok_
-====
 
 ==== Injecting the module
 
@@ -43,7 +37,7 @@ Add the reference to the module in your REST service using the `@Inject` annotat
 
 [source,java]
 ----
-import com.capgemini.devonfw.module.async.common.api.Async;
+import com.devonfw.module.async.common.api.Async;
 
 ...
 
@@ -63,7 +57,7 @@ Remember to add the package of the module to the `@ComponentScan` annotation in 
 
 [source,java]
 ----
-@ComponentScan(basePackages = { "com.capgemini.devonfw.module.async" , "my.other.components.package" })
+@ComponentScan(basePackages = { "com.devonfw.module.async" , "my.other.components.package" })
 ----
 
 
@@ -93,7 +87,7 @@ The call will be like the following:
 
 [source,java]
 ----
-import com.capgemini.devonfw.module.async.common.api.Async;
+import com.devonfw.module.async.common.api.Async;
 import javax.ws.rs.container.AsyncResponse;
 import javax.ws.rs.container.Suspended;
 ...

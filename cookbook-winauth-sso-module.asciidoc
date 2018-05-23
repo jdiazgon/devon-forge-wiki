@@ -8,7 +8,7 @@ toc::[]
 
 == The Winauth-SSO module
 
-This Devonfw IP module allows the applications to authenticate the users using the Windows credentials. The basic result is that the login is made automatically through the browser avoiding the login form (in some browsers like _Firefox_, you may need to authenticate once).
+This Devonfw module allows the applications to authenticate the users using the Windows credentials. The basic result is that the login is made automatically through the browser avoiding the login form (in some browsers like _Firefox_, you may need to authenticate once).
 
 === Single Sign On
 
@@ -27,17 +27,11 @@ Include the starter in pom.xml. Verify that the _version_ matches the last avail
 [source,xml]
 ----
 <dependency>
-      <groupId>com.capgemini.devonfw.starter</groupId>
+      <groupId>com.devonfw.starter</groupId>
       <artifactId>devonfw-winauth-sso-starter</artifactId>
       <version>${devonfw.version}</version>
 </dependency>
 ----
-
-[WARNING]
-====
-The IP modules of Devonfw are stored in https://www.jfrog.com/artifactory/[Artifactory]. In case you do not have access to that repository, as the modules are included in the Devonfw distribution, you can install them manually. To do so, open a Devonfw command line (_console.bat_), go to `Devon-dist\workspaces\examples\devon\modules` and execute the command `mvn install`.
-If the project is already imported in Eclipse then update project: Right click on _project_ > _Maven_ > _Update Project_ > check the _Force update of Snapshot/Releases_ checkbox > _Ok_
-====
 
 ===== Step 2: Inject the module
 
@@ -45,7 +39,7 @@ The class `general/service/impl/config/BaseWebSecurityConfig.java` uses the `@In
 
 [source,java]
 ----
-import com.capgemini.devonfw.module.winauthsso.common.api.WinauthSSO;
+import com.devonfw.module.winauthsso.common.api.WinauthSSO;
 
 {...}
 
@@ -197,7 +191,7 @@ Now, let's discuss how to create a Winauth SSO variable and to configure the fil
 
 [source,java]
 ----
-import com.capgemini.devonfw.module.winauthsso.common.api.WinauthSSO;
+import com.devonfw.module.winauthsso.common.api.WinauthSSO;
 
 {...}
 

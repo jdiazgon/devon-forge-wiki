@@ -17,7 +17,7 @@ In order to create self-contained elements that are pluggable to Devon based pro
 [source,xml]
 ----
 <dependency>
-      <groupId>com.capgemini.devonfw.modules</groupId>
+      <groupId>com.devonfw.modules</groupId>
       <artifactId>[module-name]</artifactId>
       <version>[module-version]</version>
 </dependency>
@@ -25,7 +25,7 @@ In order to create self-contained elements that are pluggable to Devon based pro
 
 [source,java]
 ----
-import com.capgemini.devonfw.module.MyModule;
+import com.devonfw.module.MyModule;
 
 public class MyApp{
 
@@ -61,7 +61,7 @@ import org.springframework.integration.config.EnableIntegration;
 
 @Configuration
 @EnableIntegration
-@ComponentScan(basePackages = { "com.capgemini.devonfw.module.mymodule" })
+@ComponentScan(basePackages = { "com.devonfw.module.mymodule" })
 public class ModuleConfig {
 
 }
@@ -71,7 +71,7 @@ Then we can create the _spring.factories_ file in `src/main/resources/META-INF` 
 
 [source]
 ----
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.capgemini.devonfw.module.mymodule.configuration.ModuleConfig
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.devonfw.module.mymodule.configuration.ModuleConfig
 ----
 
 ==== autoconfiguration with the  _properties_ file

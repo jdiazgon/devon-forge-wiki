@@ -8,7 +8,7 @@ toc::[]
 
 == The Winauth-AD module
 
-This Devonfw IP module allows the applications to authenticate the users against an Active Directory.
+This Devonfw module allows the applications to authenticate the users against an Active Directory.
 
 === Authentication with Active Directory
 
@@ -27,17 +27,12 @@ Include the starter in pom.xml. Verify that the _version_ matches the last avail
 [source,xml]
 ----
 <dependency>
-      <groupId>com.capgemini.devonfw.starter</groupId>
+      <groupId>com.devonfw.starter</groupId>
       <artifactId>devonfw-winauth-ad-starter</artifactId>
       <version>${devonfw.version}</version>
 </dependency>
 ----
 
-[WARNING]
-====
-The IP modules of Devonfw are stored in https://www.jfrog.com/artifactory/[Artifactory]. In case you do not have access to that repository, as the modules are included in the Devonfw distribution, you can install them manually. To do so, open a Devonfw command line (_console.bat_), go to `Devon-dist\workspaces\examples\devon` and execute the command `mvn install`.
-If project is already imported in Eclipse then update project: Right click on _project_ > _Maven_ > _Update Project_ > check the _Force update of Snapshot/Releases_ checkbox > _Ok_
-====
 
 ===== Step 2: Security configuration 
 
@@ -58,7 +53,7 @@ Remember to add the package of the module to the `@ComponentScan` annotation in 
 
 [source,java]
 ----
-@ComponentScan(basePackages = { "com.capgemini.devonfw.module.winauthad" , "my.other.components.package" })
+@ComponentScan(basePackages = { "com.devonfw.module.winauthad" , "my.other.components.package" })
 ----
 
 ===== Step 3: Define the provider
@@ -91,10 +86,10 @@ Implement the class UserDetailsContextMapper to build the UserDetails with the d
 
 [source,java]
 ----
-import com.capgemini.devonfw.module.winauthad.common.api.AuthenticationSource;
-import com.capgemini.devonfw.module.winauthad.common.api.UserData;
-import com.capgemini.devonfw.module.winauthad.common.impl.security.GroupMapperAD;
-import com.capgemini.devonfw.module.winauthad.common.impl.security.PrincipalProfileImpl;
+import com.devonfw.module.winauthad.common.api.AuthenticationSource;
+import com.devonfw.module.winauthad.common.api.UserData;
+import com.devonfw.module.winauthad.common.impl.security.GroupMapperAD;
+import com.devonfw.module.winauthad.common.impl.security.PrincipalProfileImpl;
 
 @Named
 @Component
@@ -194,7 +189,7 @@ public class UserDetailsContextMapperImpl implements UserDetailsContextMapper {
     } catch (Exception e) {
       e.printStackTrace();
       UsernameNotFoundException exception = new UsernameNotFoundException("Authentication failed.", e);
-      LOG.warn("Failed com.capgemini.devonfw.module.winauthad.common.impl.security get user {} in Active Directory."
+      LOG.warn("Failed com.devonfw.module.winauthad.common.impl.security get user {} in Active Directory."
           + username + exception);
       throw exception;
     }

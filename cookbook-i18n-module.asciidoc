@@ -12,7 +12,7 @@ toc::[]
 
 Internationalization is the process of designing a software application so that it can potentially be adapted to specific local languages and regions without engineering changes. This constitutes much more than just "translating text or correct number formats". Think of internationalization as readiness for localization. Sometimes written as "i18n", internationalization evolved from a growing demand for multilingual products and applications.
 
-=== The i18n IP Module
+=== The i18n Module
 
 The i18n module provides easy creation and maintenance of distinct translations for your Devon applications. OASP, Angular and Sencha  - three distinct platforms currently forming Devon. Each provides their own specific mechanisms for L10N. I18n module fits within the context of the facilities offered by each platform. I18n artifacts are available at compile/build time and not just "run-time". It is based on a namespaced name-value system ("properties").
 
@@ -126,17 +126,12 @@ To enable i18n functionality in oasp4j based application we need to follow below
 [source,xml]
 ----
 <dependency>
-      <groupId>com.capgemini.devonfw.starter</groupId>
+      <groupId>com.devonfw.starter</groupId>
       <artifactId>devonfw-i18n-starter</artifactId>
       <version>${devonfw.version}</version>
 </dependency>
 ----
 
-[WARNING]
-====
-The IP modules of Devonfw are stored in https://www.jfrog.com/artifactory/[Artifactory]. In case, you do not have access to that repository, as the modules are included in the Devonfw distribution, you can install them manually. To do so, open a Devonfw command line (_console.bat_), go to `Devon-dist\workspaces\examples\devon\modules` and execute the command `mvn install`.
-If the project is already imported in Eclipse then update project: Right click on _project_ > _Maven_ > _Update Project_ > check the _Force update of Snapshot/Releases_ checkbox > _Ok_
-====
 
 - Comment below statement from SpringBootApp.java:
 
@@ -149,7 +144,7 @@ If the project is already imported in Eclipse then update project: Right click o
 
 [source,xml]
 ----
-@ComponentScan(basePackages = { "com.capgemini.devonfw.module.i18n",
+@ComponentScan(basePackages = { "com.devonfw.module.i18n",
 "my.other.component" }, basePackageClasses = { AdvancedRevisionEntity.class })
 ----
 
@@ -161,7 +156,7 @@ image::images/devonfw-i18n/code_springbootapp.png[,width="350",code springbootap
 
 [source,xml]
 ----
-@ComponentScan(basePackages = { "com.capgemini.devonfw.module" })
+@ComponentScan(basePackages = { "com.devonfw.module" })
 ----
 
 - In config.properties set module name which you want to use for i18n-
@@ -198,7 +193,7 @@ To add own module in i18n user needs to follow below step:
 2. Add dependency of this module in devonfw-i18n module. 
 3. In config.properties set
 i18n.input.name =USER_MODULE_NAME
-4. In class com.capgemini.devonfw.module.i18n.logic.impl.I18nImpl modify getResourceObject() method add your switch case in it. 
+4. In class com.devonfw.module.i18n.logic.impl.I18nImpl modify getResourceObject() method add your switch case in it. 
 5. Clean and build your application and launch SpringBootApp.java. You can view i18n REST service in available REST webservices (http://localhost:8081/oasp4j-sample-server/services/rest/)
 6. To test i18n REST service, the general format of the service will be as follows:
 

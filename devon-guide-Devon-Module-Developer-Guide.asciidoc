@@ -81,7 +81,7 @@ Once the console is opened, execute the command:
 ----
 
 mvn -DarchetypeVersion=dev-SNAPSHOT -DarchetypeGroupId=devonfw-archetype
--DarchetypeArtifactId=com.capgemini.devonfw.dev archetype:generate
+-DarchetypeArtifactId=com.devonfw.dev archetype:generate
 -DgroupId=com.devonfw.modules -DartifactId=samplemodule -Dversion=0.1-SNAPSHOT
 -Dpackage=com.devonfw.modules.samplemodule
 
