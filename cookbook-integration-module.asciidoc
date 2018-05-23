@@ -14,7 +14,7 @@ Within the _Enterprise architecture_ the *integration* (or https://en.wikipedia.
 
 === Stack of technologies
 
-The _Integration IP Module_ is a Java module based on https://projects.spring.io/spring-integration/[Spring Integration] solution and internally is implemented using the https://github.com/spring-projects/spring-integration-java-dsl/wiki/spring-integration-java-dsl-reference[Spring integration Java dsl reference]. In the core of all those technologies the implementation relies on the https://en.wikipedia.org/wiki/Java_Message_Service[Java Message Service (JMS)] as the messaging standard to create, send, receive and read messages.
+The _Integration Module_ is a Java module based on https://projects.spring.io/spring-integration/[Spring Integration] solution and internally is implemented using the https://github.com/spring-projects/spring-integration-java-dsl/wiki/spring-integration-java-dsl-reference[Spring integration Java dsl reference]. In the core of all those technologies the implementation relies on the https://en.wikipedia.org/wiki/Java_Message_Service[Java Message Service (JMS)] as the messaging standard to create, send, receive and read messages.
 
 - *Java Message Service*: JMS allows applications to exchange messages using reliable and loosely coupled communication. To achieve this, the communication is done through message queues so the different applications (message server, and message clients) don’t know the actual addresses of each other, so they work in an emitter/subscriber manner.  To manage those message queues, that are "out" of the applications but should be accessible, the solution provided by Devon relies on a message broker that will be in charge of messages infrastructure.
 
@@ -112,7 +112,7 @@ spring.activemq.password=admin
 
 If you have changed the _Active MQ_ configuration remember to overwrite the affected properties in the `application.properties` of your project.
 
-=== IP Integration module details
+=== Integration module details
 
 ==== Adding the starter to a project
 To access the functionality of the _Integration module_, you will need to include its starter in your project's pom.xml. Verify that the _version_ matches the last available version of the module.
@@ -125,12 +125,6 @@ To access the functionality of the _Integration module_, you will need to includ
       <version>${devonfw.version}</version>
 </dependency>
 ----
-
-[WARNING]
-====
-The IP modules of Devonfw are stored in https://www.jfrog.com/artifactory/[Artifactory]. In case, you do not have access to that repository, as the modules are included in the Devonfw distribution, you can install them manually. To do so, open a Devonfw command line (_console.bat_), go to `Devon-dist\workspaces\examples\devon\modules` and execute the command `mvn install`.
-If the project is already imported in Eclipse then update project: Right click on _project_ > _Maven_ > _Update Project_ > check the _Force update of Snapshot/Releases_ checkbox > _Ok_
-====
 
 ==== Injecting the module
 
