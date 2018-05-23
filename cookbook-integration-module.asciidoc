@@ -120,7 +120,7 @@ To access the functionality of the _Integration module_, you will need to includ
 [source,xml]
 ----
  <dependency>
-      <groupId>com.capgemini.devonfw.starter</groupId>
+      <groupId>com.devonfw.starter</groupId>
       <artifactId>devonfw-integration-starter</artifactId>
       <version>${devonfw.version}</version>
 </dependency>
@@ -138,7 +138,7 @@ After adding the dependency, in order to start using the module inject it using 
 
 [source,java]
 ----
-import com.capgemini.devonfw.module.integration.common.api.Integration;
+import com.devonfw.module.integration.common.api.Integration;
 
 ...
 
@@ -282,7 +282,7 @@ In our _sender_ application we only need to call the _send_ method of the _integ
 
 [source,java]
 ----
-import com.capgemini.devonfw.module.integration.common.api.Integration;
+import com.devonfw.module.integration.common.api.Integration;
 
 public class MyEmitterApp{
 
@@ -330,7 +330,7 @@ As in the case of _emitter_ application you have to add the <<Adding the starter
 
 [source,java]
 ----
-import com.capgemini.devonfw.module.integration.common.api.Integration;
+import com.devonfw.module.integration.common.api.Integration;
 
 public class MySubscriberApp{
 
@@ -434,7 +434,7 @@ In our _sender-receiver_ application we only need to call the _sendAndReceive_ m
 
 [source,java]
 ----
-import com.capgemini.devonfw.module.integration.common.api.Integration;
+import com.devonfw.module.integration.common.api.Integration;
 
 public class MyFirstApp{
 
@@ -469,7 +469,7 @@ As in the case of _sender-receiver_ application, you have to add the <<Adding th
 
 [source,java]
 ----
-import com.capgemini.devonfw.module.integration.common.api.Integration;
+import com.devonfw.module.integration.common.api.Integration;
 
 public class MySecondApp{
 
@@ -586,7 +586,7 @@ In our _sender-receiver_ application we only need to call the _sendAndReceiveAsy
 
 [source,java]
 ----
-import com.capgemini.devonfw.module.integration.common.api.Integration;
+import com.devonfw.module.integration.common.api.Integration;
 
 public class MyFirstApp{
 
@@ -617,7 +617,7 @@ As in the previous application, you have to add the <<Adding the starter to a pr
 
 [source,java]
 ----
-import com.capgemini.devonfw.module.integration.common.api.Integration;
+import com.devonfw.module.integration.common.api.Integration;
 
 public class MySecondApp{
 
@@ -700,7 +700,7 @@ After you have added the <<Adding the starter to a project,module dependency>> a
 
 [source,java]
 ----
-import com.capgemini.devonfw.module.integration.common.api.Integration;
+import com.devonfw.module.integration.common.api.Integration;
 
 public class MySenderApp{
 
@@ -720,7 +720,7 @@ Then, in the _subscriber_ application, after adding the <<Adding the starter to 
 
 [source,java]
 ----
-import com.capgemini.devonfw.module.integration.common.api.Integration;
+import com.devonfw.module.integration.common.api.Integration;
 
 public class MySubscriberApp{
 
@@ -750,7 +750,7 @@ In the app that is going to start the flow, after adding the <<Adding the starte
 
 [source,java]
 ----
-import com.capgemini.devonfw.module.integration.common.api.Integration;
+import com.devonfw.module.integration.common.api.Integration;
 
 public class MyFirstApp{
 
@@ -803,7 +803,7 @@ In a second application, after adding the <<Adding the starter to a project,modu
 
 [source,java]
 ----
-import com.capgemini.devonfw.module.integration.common.api.Integration;
+import com.devonfw.module.integration.common.api.Integration;
 
 public class MySecondApp{
 
@@ -851,7 +851,7 @@ In the second app you can subscribe to the channel with the method _subscribeAnd
 
 [source,java]
 ----
-import com.capgemini.devonfw.module.integration.common.api.Integration;
+import com.devonfw.module.integration.common.api.Integration;
 
 public class MySecondApp{
   @Inject 
