@@ -59,7 +59,7 @@ You should see the _Devcon_'s GUI. Select `oasp4j` and `create`
 
 image::images/oasp4j/3.BuildYourOwn/newapp1.png[width="450", link="images/oasp4j/3.BuildYourOwn/newapp1.png"]
 
-Then we only need to define our server app _path_ (for the location of the app select our just created _jumpthequeue_ directory), _name_, _groupid_, _package_, _version_ and _dbtype_. Finally click on _Start_ button.
+Then we only need to define our server app _path_ (for the location of the app select our just created _jumpthequeue_ directory), _name_, _groupid_, _package_, _version_ and _dbtype(h2|postgresql|mysql|mariadb|oracle|hana|db2)_. Finally click on _Start_ button.
 
 image::images/oasp4j/3.BuildYourOwn/devcon_dbtype.PNG[width="450", link="images/oasp4j/3.BuildYourOwn/devcon_dbtype.PNG"]
 
