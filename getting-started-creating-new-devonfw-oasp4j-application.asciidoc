@@ -102,13 +102,13 @@ Use the _Verify_ button to check the connection. Subsequently, you will see a me
 
 ===== Step 3 - Configure the application properties
 
-Fill the _Group Id_, _Artifact Id_, _Version_ and _Package_ for your project. 
+Fill the _Group Id_, _Artifact Id_, _Version_ and _Package_ for your project. Also in _Properties available from archetype_ section update dbtype as required
 //////////////////////////////////////////
 If you want to add an EAR generation mechanism to your project, you should fill the property _earProjectName_ with the value _Artifact Id_ + _-ear_. For example, _sampleapp-ear_. 
 
 If you only want a WAR generation, you can remove the property _earProjectName_.
 //////////////////////////////////////////
-image::images/create-new-app/devon-guide-newapp-archetype-parameters.PNG[,width="450", link="images/create-new-app/devon-guide-newapp-archetype-parameters.PNG"]
+image::images/create-new-app/devon-guide-newapp-archetype-parameters_new.PNG[,width="450", link="images/create-new-app/devon-guide-newapp-archetype-parameters_new.PNG"]
 [EAR]
 
 * Click on the Finish button and the project will be ready for execution.
