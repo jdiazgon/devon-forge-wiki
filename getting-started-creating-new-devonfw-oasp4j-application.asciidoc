@@ -102,7 +102,7 @@ Use the _Verify_ button to check the connection. Subsequently, you will see a me
 
 ===== Step 3 - Configure the application properties
 
-Fill the _Group Id_, _Artifact Id_, _Version_ and _Package_ for your project. Also in _Properties available from archetype_ section update dbtype as required
+Fill the _Group Id_, _Artifact Id_, _Version_ and _Package_ for your project. Also in _Properties available from archetype_ section update dbtype as required with any of values (h2|postgresql|mysql|mariadb|oracle|hana|db2)
 //////////////////////////////////////////
 If you want to add an EAR generation mechanism to your project, you should fill the property _earProjectName_ with the value _Artifact Id_ + _-ear_. For example, _sampleapp-ear_. 
 
