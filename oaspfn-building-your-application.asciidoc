@@ -21,7 +21,7 @@ Once installed, the first thing you should do is install the extensions that wil
 
 1. Install https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync[Settings Sync] extension.
 2. Open the command palette (Ctrl+Shift+P) and introduce the command: *Sync: Download Settings*.
-3. Provide GIST ID: *d976bc200f0403d8045b7e4ee39d4361*.
+3. Provide GIST ID: *3b1d9d60e842f499fc39334a1dd28564*.
 
 In the case that you are unable to set up the extensions using the method mentioned, you can also use the scripts provided in https://github.com/oasp/oasp-vscode-ide[this] repository.
 
