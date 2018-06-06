@@ -741,11 +741,15 @@ The <<OASP4J and Spring Boot Configuration,configuration>> for Spring and Hibern
 
 ==== Database System and Access
 
-Obviously you need to configure which type of database you want to use as well as the location and credentials to access it. To configure a new database we must follow next steps 
+For different Database Configuration we only need to give input to archetype at time of project creation which DB you need to configure i.e. if you are using command line tool for generating project you need to add dbtype (h2|postgresql|mysql|mariadb|oracle|hana|db2)
 
-===== Add dependencies
+[source,bash]
+---- 
+mvn -DarchetypeVersion=<OASP4J-VERSION> -DarchetypeGroupId=io.oasp.java.templates -DarchetypeArtifactId=oasp4j-template-server archetype:generate -DgroupId=<APPLICATION-GROUP-ID> -DartifactId=<APPLICATION-ARTIFACT-ID> -Dversion=<APPLICATION-VERSION> -Dpackage=<APPLICATION-PACKAGE-NAME> -DdbType=<DBTYPE>
+---- 
+===== Dependencies
 
-Add Dependency for database in pom.xml file. For e.g if we are configuring mysql database in our application we need to add below dependency in pom.xml file.
+Dependency for database in pom.xml file will be added automatically. For e.g if we are configuring mysql database in our application the below dependency will be there in your pom.xml file.
 
 MySQL:
  
@@ -757,44 +761,52 @@ MySQL:
 
 *Note*: this driver should NOT be used in a production environment because of license issues. See down for an alternative.
 
-===== Create a Spring Profile
 
-Spring Profile provides a way to segregate parts of your application configuration and make it only available in certain environments. In our case, we're going to create a profile to our database configuration.
+===== Database configuration
 
-Create a file in _src/resources/config_ named _application-{PROFILE_NAME}.properties_. The name of the profile isn't important, for this example we named it _application-mysql.properties_.
-
-===== Set the database configuration
-
-Add database configuration in _application-{PROFILE_NAME}.properties_ file. For e.g
+Database configuration in src/resources/config/application.properties_ file. For e.g
 
 MySQL:
 [source,java]
 ----
+server.port=8081
+server.context-path=/
+spring.datasource.password=<password>
+# Enable JSON pretty printing
+spring.jackson.serialization.INDENT_OUTPUT=true
+# Flyway for Database Setup and Migrations
+flyway.enabled=true
+flyway.clean-on-validation-error=true
+
+----
+Database configuration in src/resources/application.properties_ file. For e.g
+
+MySQL:
+[source,java]
+----
+spring.application.name=myapplication
+server.context-path=/
+security.expose.error.details=false
+security.cors.enabled=false
+spring.jpa.hibernate.ddl-auto=validate
+# Datasource for accessing the database
 spring.jpa.database=mysql
-spring.datasource.url=jdbc:mysql://localhost:3306/restaurant?user=root&password=root&connectTimeout=10000&socketTimeout=10000&autoReconnect=true
-spring.jpa.database-platform=org.hibernate.dialect.MySQL5Dialect
-spring.datasource.username=root
-spring.datasource.password=root
-spring.datasource.driver-class-name=com.mysql.jdbc.Driver
-flyway.locations=classpath:db/migration,classpath:db/migration/mysql
+spring.datasource.username=mysqluser
+spring.jpa.hibernate.naming.implicit-strategy=org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
+spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+spring.batch.job.enabled=false
+# Flyway for Database Setup and Migrations
+flyway.locations=classpath:db/migration,classpath:db/type/mysql
+
 ----
 
-===== Activate the new profile
-
-To activate new profile update _src/main/resources/application.properties_ file. Set _spring.profiles.active= profile-name_. In our example profile-name is mysql. 
- 
-MySQL:
-[source,java]
-----
-spring.profiles.active=mysql 
-----
 
 ===== Update database script files
 
 Devonfw has https://flywaydb.org/getstarted/[flyway] configured. Flyway is an open-source database migration tool.It strongly favors simplicity and convention over configuration.Flyway will search for script files for corresponding database. It will parse the script files and create or update corresponding tables in a database.
 
-Generally, DDL Script file is present at location _db/migration/database/1.0_. For e.g _db/migration/mysql/1.0_
-And other script files are present at location _db/migration_.
+Generally, DDL Script file is present at location _db/type/database/V000_. For e.g _db/type/mysql/V0002_Create_RevInfo.sql
+And other script files are present at location _db/migration/1.0/.
 Make sure script files are error free.
 We can set customized location for migration scripts. We need to add _flyway.locations_ property in _application.properties_. For example
 
