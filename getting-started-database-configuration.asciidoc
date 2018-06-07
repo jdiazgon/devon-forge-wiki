@@ -129,7 +129,7 @@ Configuration in file : src/resources/config/application.properties_ file
 server.port=8081
 server.context-path=/
 spring.datasource.url=jdbc:postgresql://localhost:5432/<>
-spring.datasource.password=<>
+spring.datasource.password=<password>
 spring.jackson.serialization.INDENT_OUTPUT=true
 flyway.enabled=true
 flyway.clean-on-validation-error=true
@@ -145,29 +145,43 @@ Once downloaded, they should be installed in the local Maven repository (_.m2_ f
 mvn install:install-file -DgroupId=com.microsoft.sqlserver -DartifactId=sqljdbc4 -Dversion=<version> -Dpackaging=jar -DgeneratePom=true -Dfile=<driver JAR file>
 ----
 
-Once installed, the library must be added to the project's _pom.xml_ file. The dependency declaration should be something like
+Once installed, the below library will be there in the project's _pom.xml_ file. The dependency declaration should be something like
 
 [source,xml]
 ----
  <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
-    <artifactId>sqljdbc4</artifactId>
-    <version>4.0</version>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>6.4.0.jre8</version>
   </dependency>
 ----
 
-Ultimately, the following configuration must be used in order to use the MSSQL server driver and database:
+Ultimately, the following configuration will be added for the MSSQL server driver and database:
 
+Configuration in file : src/resources/application.properties_ file
 [source]
-spring.jpa.database=sqlserver
-spring.datasource.url=jdbc:sqlserver://<servername>:<port>;databaseName=<databasename>
-spring.jpa.database-platform=org.hibernate.dialect.SQLServerDialect
-spring.datasource.username=root
-spring.datasource.password=root
-spring.datasource.driver-class-name=com.microsoft.sqlserver.jdbc.SQLServerDriver
+spring.application.name=mssqltest
+server.context-path=/
+security.expose.error.details=false
+security.cors.enabled=false
+spring.jpa.hibernate.ddl-auto=validate
+spring.jpa.database=mssql
+spring.datasource.username=<username>
+spring.jpa.hibernate.naming.implicit-strategy=org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
+spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+spring.batch.job.enabled=false
+flyway.locations=classpath:db/migration,classpath:db/type/mssql
 
+Configuration in file : src/resources/config/application.properties_ file
+[source]
+server.port=8081
+server.context-path=/
+spring.datasource.password=<password>
+spring.datasource.url=jdbc:mssql:TODO
+spring.jackson.serialization.INDENT_OUTPUT=true
+flyway.enabled=true
+flyway.clean-on-validation-error=true
 
-(Replace _root_ with your actual username / password)
 
 For further information see: https://wiki.jasig.org/pages/viewpage.action?pageId=57578731[MS SQL Server and MS JDBC Driver ]
 
@@ -196,15 +210,31 @@ The dependency with DB2 is explained below:
 
 And the properties are explained below:
 
+Configuration in file : src/resources/application.properties_ file
 [source]
-jdbc:db2://<server>:<port>/<dbalias>
-spring.datasource.url=jdbc:db2://<server>/<port>:user=<user>;password=<password>; 
-spring.jpa.database-platform=org.hibernate.dialect.DB2Dialect
-spring.datasource.traceLevel=com.ibm.db2.jcc.DB2BaseDataSource.TRACE_ALL
-spring.datasource.driver-class-name=com.ibm.db2.jcc.DB2Driver 
+spring.application.name=db2test
+server.context-path=/
+security.expose.error.details=false
+security.cors.enabled=false
+spring.jpa.hibernate.ddl-auto=validate
+spring.jpa.database=db2
+spring.datasource.username=<username>
+spring.jpa.hibernate.naming.implicit-strategy=org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
+spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+spring.batch.job.enabled=false
+flyway.locations=classpath:db/migration,classpath:db/type/db2
 
+Configuration in file : src/resources/config/application.properties_ file
+[source]
+server.port=8081
+server.context-path=/
+spring.datasource.password=<password>
+spring.datasource.url=jdbc:db2:TODO
+spring.jackson.serialization.INDENT_OUTPUT=true
+flyway.enabled=true
+flyway.clean-on-validation-error=true
 
-You can see that the credential properties are included in the URL. If you want to learn more about URL format, you can see http://www.ibm.com/support/knowledgecenter/SSEPGG_9.7.0/com.ibm.db2.luw.apdv.java.doc/src/tpc/imjcc_r0052342.html[SQLJ type 4 connectivity]  and http://www.ibm.com/support/knowledgecenter/SSEPGG_9.7.0/com.ibm.db2.luw.apdv.java.doc/src/tpc/imjcc_r0052341.html[SQLJ type 2 connectivity] URL syntax.
+If you want to learn more about URL format, you can see http://www.ibm.com/support/knowledgecenter/SSEPGG_9.7.0/com.ibm.db2.luw.apdv.java.doc/src/tpc/imjcc_r0052342.html[SQLJ type 4 connectivity]  and http://www.ibm.com/support/knowledgecenter/SSEPGG_9.7.0/com.ibm.db2.luw.apdv.java.doc/src/tpc/imjcc_r0052341.html[SQLJ type 2 connectivity] URL syntax.
 
 [NOTE]
 ====
