@@ -764,13 +764,14 @@ MySQL:
 
 ===== Database configuration
 
-Database configuration in src/resources/config/application.properties_ file. For e.g
+Database configuration will be automatically generated in src/resources/config/application.properties_ file. Update the required values accordingly.
 
 MySQL:
 [source,java]
 ----
 server.port=8081
 server.context-path=/
+spring.datasource.url=jdbc:mysql://address=(protocol=tcp)(host=localhost)(port=3306)/<db>
 spring.datasource.password=<password>
 # Enable JSON pretty printing
 spring.jackson.serialization.INDENT_OUTPUT=true
@@ -779,7 +780,7 @@ flyway.enabled=true
 flyway.clean-on-validation-error=true
 
 ----
-Database configuration in src/resources/application.properties_ file. For e.g
+Database configuration will be automatically generated in src/resources/application.properties_ file. Update the required values accordingly.
 
 MySQL:
 [source,java]
