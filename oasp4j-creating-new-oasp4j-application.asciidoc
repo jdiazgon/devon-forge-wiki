@@ -136,26 +136,23 @@ You are redirected to the login screen because, by default, the new _Oasp4j_ app
 
 Creating _Oasp4j_ based apps, we get the following main features _out-of-the-box_:
 
-* _Maven_ project with _core_ project and _server_ project:
+* _Maven_ project with api project, _core_ project and _server_ project:
+
+** _api_ project for the common API
 
 ** _core_ project for the app implementation
 
 ** _server_ project ready to package the app for the deployment
 
-image::images/oasp4j/3.BuildYourOwn/emptyapp_project.png[ width="250", link="images/oasp4j/3.BuildYourOwn/emptyapp_project.png"]
+image::images/oasp4j/3.BuildYourOwn/devcon_oasp4j_project_exp.PNG[ width="250", link="images/oasp4j/3.BuildYourOwn/devcon_oasp4j_project_exp.PNG"]
 
 
 * Data base ready environment with an _h2_ instance
-* Spring profiles ready for different data bases
-
-image::images/oasp4j/3.BuildYourOwn/emptyapp_dbprofile.png[ width="650", link="images/oasp4j/3.BuildYourOwn/emptyapp_dbprofile.png"]
-
-
 * Data model schema
 * Mock data schema
 * Data base version control with Flyway
 
-image::images/oasp4j/3.BuildYourOwn/emptyapp_dbmodel.png[ width="650", link="images/oasp4j/3.BuildYourOwn/emptyapp_dbmodel.png"]
+image::images/oasp4j/3.BuildYourOwn/devcon_oasp4j_flyway.PNG[ width="250", link="images/oasp4j/3.BuildYourOwn/devcon_oasp4j_flyway.PNG"]
 
 
 * Bean mapper ready
