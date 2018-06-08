@@ -1,0 +1,197 @@
+:toc: macro
+toc::[]
+
+:doctype: book
+:reproducible:
+:source-highlighter: rouge
+:listing-caption: Listing
+
+= Devonfw Release notes 2.4 “EVE”
+
+image::images/release-notes-2.4/eve.jpg[width="680"]
+
+== Introduction
+
+We are proud to announce the immediate release of devonfw version 2.4 (code named “EVE” during development). This version is the first one that fully embraces Open Source, including components like the documentation assets and Cobigen. Most of the IP (Intellectual Property or proprietary) part of devonfw are now published under the Apache License version 2.0 (with the documentation under the Creative Commons License (Attribution-NoDerivatives)). This includes the GitHub repositories where all the code and documentation is located. All of these repositories are now open for public viewing as well. 
+
+“EVE” contains a slew of new features but in essence it is already driven by what we expect to be the core focus of 2018: strengthening the platform and improving quality.
+
+This release is also fully focused on deepening the platform rather than expanding it. That is to say: we have worked on improving existing features rather than adding new ones and strengthen the qualitative aspects of the software development life cycle, i.e. security, testing, infrastructure (CI, provisioning) etc.
+
+“EVE” already is very much an example of this. This release contains the Allure Test Framework (included as an incubator in version 2.3) update called MrChecker Test Framework. MrChecker is an automated testing framework for functional testing of web applications, API web services, Service Virtualization, Security and in coming future native mobile apps, and databases. All modules have tangible examples of how to build resilient integration test cases based on delivered functions. 
+
+Another incubator being updated is the devonfw Shop Floor which intended to be a compilation of DevOps experiences from the Devonfw perspective. A new part of the release is the new Solution Guide for Application Security based on the state of the art in OWASP based application security. 
+
+There is a whole range of new features and improvements which can be seen in that light. OASP4j 2.6 changes and improves the package structure of the core Java framework. The My Thai Star sample app has now been upgraded to Angular 6, lots of bugs have been fixed and the devonfw Guide has once again been improved. 
+
+== Changes and new features
+
+=== Devonfw dist 
+
+* Eclipse Oxygen integrated
+** CheckStyle Plugin updated.
+** SonarLint Plugin updated.
+** Git Plugin updated.
+** FindBugs Plugin updated.
+** Cobigen plugin updated. 
+* Other Software
+** Visual Studio Code latest version included and preconfigured with https://github.com/oasp/oasp-vscode-ide 
+** Ant updated to latest.
+** Maven updated to latest.
+** Java updated to latest.
+** Nodejs LTS updated to latest.
+** @angular/cli included.
+** Yarn package manager updated.
+** Python3 updated.
+** Spyder3 IDE integrated in python3 installation updated.
+** OASP4JS-application-template for Angular 6 at workspaces/examples
+
+
+=== My Thay Star Sample Application
+
+The new release of My Thai Star has focused on the following improvements:
+
+* Release 1.6.0.
+* Travis CI integration with Docker. Now we get a valuable feedback of the current status and when collaborators make pull requests.
+* Docker compose deployment. 
+* OASP4J:
+** Flyway upgrade from 3.2.1 to 4.2.0
+** Bug fixes.
+* OASP4JS:
+** Client OASP4JS updated to Angular 6.
+** Frontend translated into 9 languages.
+** Improved mobile and tablet views. 
+** Routing fade animations.
+** Compodoc included to generate dynamically frontend documentation. 
+
+=== Documentation updates
+The following contents in the devonfw guide have been updated:
+
+* Devonfw OSS modules documentation.
+* Creating a new OASP4J application.
+* How to update Angular CLI in devonfw.
+* Include Angular i18n. 
+
+Apart from this the documentation has been reviewed and some typos and errors have been fixed. 
+
+The current development of the guide has been moved to https://github.com/oasp-forge/devon-guide/wiki in order to be available as the rest of OSS assets.
+
+=== OASP4J
+The following changes have been incorporated in OASP4J:
+
+* Integrate batch with archetype.
+* Application module structure and dependencies improved.
+* Issues with Application Template fixed. 
+* Solved issue where Eclipse maven template oasp4j-template-server version 2.4.0 produced pom with missing dependency spring-boot-starter-jdbc.
+* Solved datasource issue with project archetype 2.4.0.
+* Decouple archetype from sample (restaurant).
+* Upgrade to Flyway 4.
+* Fix for issue with Java 1.8 and QueryDSL #599.
+
+=== OASP4JS
+The following changes have been incorporated in OASP4JS:
+
+* First version of the new client application architecture guide https://github.com/oasp-forge/oasp4js-wiki/wiki 
+* Angular CLI 6,
+* Angular 6,
+* Angular Material 6 and Covalent 2.0.0-beta.1,
+* Ionic 3.20.0,
+* Cordova 8.0.0,
+* OASP4JS Angular application template updated to Angular 6 with visual improvements and bugfixes https://github.com/oasp/oasp4js-application-template 
+* OASP4JS Ionic application template updated and improved https://github.com/oasp/oasp4js-ionic-application-template 
+* PWA enabled.
+
+=== AppSec Quick Solution Guide
+ 
+This release incorporates a new Solution Guide for Application Security based on the state of the art in OWASP based application security. The purpose of this guide is to offer quick solutions for common application security issues for all applications based on devonfw.  It’s often the case that we need our systems to comply to certain sets of security requirements and standards. Each of these requirements needs to be understood, addressed and converted to code or project activity. We want this guide to prevent the wheel from being reinvented over and over again and to give clear hints and solutions to common security problems.
+
+* The wiki can be accessed here: https://github.com/devonfw/devonfw-security/wiki
+* The PDF can be accessed here: https://github.com/devonfw/devonfw-security
+ 
+=== CobiGen
+* CobiGen_Templates project and docs updated.
+* CobiGen Angular 6 generation improved based on the updated application template
+* CobiGen Ionic CRUD App generation based on Ionic application template. Although a first version was already implemented, it has been deeply improved:
+** Changed the code structure to comply with Ionic standards.
+** Added pagination.
+** Pull-to-refresh, swipe and attributes header implemented.
+** Code documented and JSDoc enabled (similar to Javadoc)
+* CobiGen TSPlugin Interface Merge support.
+* CobiGen XML plugin comes out with new cool features:
+** Enabled the use of XPath within variable assignment. You can now retrieve almost any data from an XML file and store it on a variable for further processing on the templates. Documented here.
+** Able to generate multiple output files per XML input file.
+** Generating code from UML diagrams. XMI files (standard XML for UML) can be now read and processed. This means that you can develop templates and generate code from an XMI like class diagrams.
+* CobiGen OpenAPI plugin released with multiple bug-fixes and other functionalities like:
+** Assigning global and local variables is now possible. Therefore you can set any string for further processing on the templates. For instance, changing the root package name of the generated files. Documented here.
+** Enabled having a class with more than one relationship to another class (more than one property of the same type).
+* CobiGen Text merger plugin has been extended and now it is able to merge text blocks. This means, for example, that the generation and merging of AsciiDoc documentation is possible. Documented here.
+
+=== Devcon 
+A new version of Devcon has been released. Fixes and new features include:
+
+* Now Devcon is OSS, with public repository at https://github.com/devonfw/devcon 
+* Updated to match current OASP4J
+* Update to download Linux distribution.
+* Custom modules creation improvements.
+* Bugfixes. 
+
+=== Devonfw OSS Modules
+* Existing devonfw IP modules have been moved to OSS. 
+** They can now be accessed in any OASP4J project as optional dependencies from Maven Central.
+** The repository now has public access https://github.com/devonfw/devon
+* Starters available for modules:
+** Reporting module
+** WinAuth AD Module
+** WinAuth SSO Module
+** I18n Module
+** Async Module
+** Integration Module
+** Microservice Module
+** Compose for Redis Module 
+
+See: https://github.com/devonfw/devon/wiki#devonfw-modules  
+
+=== Devonfw Shop Floor 
+
+* Devonfw Shop Floor 4 Docker
+** Docker-based CICD environment
+*** docker-compose.yml (installation file)
+*** dsf4docker.sh (installation script)
+*** Service Integration (documentation in Wiki)
+** Devonfw projects build and deployment with Docker
+*** Dockerfiles (multi-stage building)
+**** Build artifact (NodeJS for Angular and Maven for Java)
+**** Deploy built artifact (NGINX for Angular and Tomcat for Java)
+**** NGINX Reverse-Proxy to redirect traffic between both Angular client and Java server containers.
+* Devonfw Shop Floor 4 OpenShift
+** Devonfw projects deployment in OpenShift cluster
+*** s2i images
+*** OpenShift templates
+*** Video showcase (OpenShift Origin 3.6)
+
+This incubator is intended to be a compilation of DevOps experiences from the Devonfw perspective. “How we use our Devonfw projects in DevOps environments”. Integration with the Production Line, creation and service integration of a Docker-based CI environment and deploying Devonfw applications in an OpenShift Origin cluster using Devonfw templates.
+See: https://github.com/devonfw/devonfw-shop-floor
+
+=== Devonfw Testing 
+
+The MrChecker Test Framework is an automated testing framework for functional testing of web applications, API web services, Service Virtualization, Security and in coming future native mobile apps, and databases. All modules have tangible examples of how to build resilient integration test cases based on delivered functions. 
+
+* Examples available under embedded project “MrChecker-App-Under-Test” and in project wiki: https://github.com/devonfw/devonfw-testing/wiki 
+* How to install: 
+** Wiki : https://github.com/devonfw/devonfw-testing/wiki/How-to-install  
+* Release Note: 
+** module core - 4.12.0.8: 
+*** fixes on getting Environment values
+*** top notch example how to keep vulnerable data in repo , like passwords
+** module selenium - 3.8.1.8:
+*** browser driver auto downloader
+*** list of out off the box examples to use in any web page 
+** module webAPI - ver. 1.0.2 : 
+*** api service virtualization with REST and SOAP examples
+*** api service virtualization with dynamic arguments 
+*** REST working test examples with page object model
+** module security - 1.0.1 (security tests against My Thai Start)
+** module DevOps :
+*** dockerfile for Test environment execution
+*** CI + CD as jenkinsfile code
+

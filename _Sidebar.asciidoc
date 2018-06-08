@@ -207,6 +207,7 @@
 
 == Appendix
 
+- link:release-notes-version-2.4[Release Notes devonfw version 2.4]
 - link:release-notes-version-2.3[Release Notes devonfw version 2.3]
 - link:release-notes-version-2.2[Release Notes devonfw version 2.2]
 - link:release-notes-version-2.1[Release Notes devonfw version 2.1]
