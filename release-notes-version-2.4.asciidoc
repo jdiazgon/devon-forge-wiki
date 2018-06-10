@@ -6,9 +6,7 @@ toc::[]
 :source-highlighter: rouge
 :listing-caption: Listing
 
-= Devonfw Release notes 2.4 “EVE”
-
-image::images/release-notes-2.4/eve.jpg[width="680"]
+= devonfw Release notes 2.4 “EVE”
 
 == Introduction
 
@@ -24,7 +22,20 @@ Another incubator being updated is the devonfw Shop Floor which intended to be a
 
 There is a whole range of new features and improvements which can be seen in that light. OASP4j 2.6 changes and improves the package structure of the core Java framework. The My Thai Star sample app has now been upgraded to Angular 6, lots of bugs have been fixed and the devonfw Guide has once again been improved. 
 
+Last but not least, this release contains the formal publication of the Devonfw Methodology or The Accelerated Solution Design - an Industry Standards based solution design and specification (documentation) methodology for Agile (and less-than-agile) projects. 
+
+
 == Changes and new features
+
+=== devonfw 2.4 is Open Source
+
+This version is the first release of devonfw that fully embraces Open Source, including components like the documentation assets and Cobigen. This is done in response to intensive market pressure and demands from the MU´s (Public Sector France, Netherlands)
+
+Most of the IP (Intellectual Property or proprietary) part of devonfw are now published under the Apache License version 2.0 (with the documentation under the Creative Commons License (Attribution-NoDerivatives)). 
+
+So you can now use the devonfw distribution (the "zip" file), Cobigen, the devonfw modules and all other components without any worry to expose the client unwittingly to Capgemini IP.
+
+*Note:* there are still some components which are IP and are not published under an OSS license. The class room trainings, the Sencha components and some Cobigen templates. But these are not includes in the distribution nor documentation and are now completely maintained separately. 
 
 === Devonfw dist 
 
@@ -194,4 +205,26 @@ The MrChecker Test Framework is an automated testing framework for functional te
 ** module DevOps :
 *** dockerfile for Test environment execution
 *** CI + CD as jenkinsfile code
+
+=== devonfw methodology: Accelerated Solution Design
+
+One of the prime challenges in Distributed Agile Delivery is the maintenance of a common understanding and unity of intent among all participants in the process of creating a product. That is: how can you guarantee that different parties in the client, different providers, all in different locations and time zones during a particular period of time actually understand the requirements of the client, the proposed solution space and the state of implementation.
+
+We offer the Accelerated Solution Design as a possible answer to these challenges. The ASD is carefully designed to be a practical guideline that fosters and ensures the collaboration and communication among all team members. 
+
+The Accelerated Solution Design is:
+* A practical guideline rather than a “methodology”
+* Based on industry standards rather than proprietary methods
+* Consisting of an evolving, “living”, document set rather than a static, fixed document
+* Encapsulating the business requirements, functional definitions as well as Architecture design
+* Based on the intersection of Lean, Agile, DDD and User Story Mapping
+
+And further it is based on the essential belief or paradigm that ASD should be:
+
+* Focused on the design (definition) of the “externally observable behavior of a system”
+* Promoting communication and collaboration between team members
+* Guided by prototypes
+
+For more on the devonfw Methodology / ASD, see: 
+https://github.com/devonfw/devon-methodology/blob/master/design-guidelines/Accelerated_Solution_Design.adoc
 

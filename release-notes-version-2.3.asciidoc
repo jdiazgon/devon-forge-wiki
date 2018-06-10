@@ -8,8 +8,6 @@ toc::[]
 
 = Devonfw Release notes 2.3 "Dash"
 
-image::images/release-notes-2.3/devonfw-2.3-dash.png[width="680"]
-
 == Release: improving & strengthening the Platform
  
 We are proud to announce the immediate release of *devonfw version 2.3* (code named “_Dash_” during development).  This release comes with a bit of a delay as we decided to wait for the publication of OASP4j 2.5. “Dash” contains a slew of new features but in essence it is already driven by what we expect to be the core focus of 2018: strengthening the platform and improving quality.
