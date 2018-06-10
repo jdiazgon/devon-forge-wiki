@@ -213,6 +213,7 @@ One of the prime challenges in Distributed Agile Delivery is the maintenance of 
 We offer the Accelerated Solution Design as a possible answer to these challenges. The ASD is carefully designed to be a practical guideline that fosters and ensures the collaboration and communication among all team members. 
 
 The Accelerated Solution Design is:
+
 * A practical guideline rather than a “methodology”
 * Based on industry standards rather than proprietary methods
 * Consisting of an evolving, “living”, document set rather than a static, fixed document
