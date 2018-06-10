@@ -18,11 +18,11 @@ This release is also fully focused on deepening the platform rather than expandi
 
 “EVE” already is very much an example of this. This release contains the Allure Test Framework (included as an incubator in version 2.3) update called MrChecker Test Framework. MrChecker is an automated testing framework for functional testing of web applications, API web services, Service Virtualization, Security and in coming future native mobile apps, and databases. All modules have tangible examples of how to build resilient integration test cases based on delivered functions. 
 
-Another incubator being updated is the devonfw Shop Floor which intended to be a compilation of DevOps experiences from the Devonfw perspective. A new part of the release is the new Solution Guide for Application Security based on the state of the art in OWASP based application security. 
+Another incubator being updated is the devonfw Shop Floor which intended to be a compilation of DevOps experiences from the devonfw perspective. A new part of the release is the new Solution Guide for Application Security based on the state of the art in OWASP based application security. 
 
 There is a whole range of new features and improvements which can be seen in that light. OASP4j 2.6 changes and improves the package structure of the core Java framework. The My Thai Star sample app has now been upgraded to Angular 6, lots of bugs have been fixed and the devonfw Guide has once again been improved. 
 
-Last but not least, this release contains the formal publication of the Devonfw Methodology or The Accelerated Solution Design - an Industry Standards based solution design and specification (documentation) methodology for Agile (and less-than-agile) projects. 
+Last but not least, this release contains the formal publication of the devonfw Methodology or The Accelerated Solution Design - an Industry Standards based solution design and specification (documentation) methodology for Agile (and less-than-agile) projects. 
 
 
 == Changes and new features
@@ -37,7 +37,7 @@ So you can now use the devonfw distribution (the "zip" file), Cobigen, the devon
 
 *Note:* there are still some components which are IP and are not published under an OSS license. The class room trainings, the Sencha components and some Cobigen templates. But these are not includes in the distribution nor documentation and are now completely maintained separately. 
 
-=== Devonfw dist 
+=== devonfw dist 
 
 * Eclipse Oxygen integrated
 ** CheckStyle Plugin updated.
@@ -78,7 +78,7 @@ The new release of My Thai Star has focused on the following improvements:
 === Documentation updates
 The following contents in the devonfw guide have been updated:
 
-* Devonfw OSS modules documentation.
+* devonfw OSS modules documentation.
 * Creating a new OASP4J application.
 * How to update Angular CLI in devonfw.
 * Include Angular i18n. 
@@ -146,7 +146,7 @@ A new version of Devcon has been released. Fixes and new features include:
 * Custom modules creation improvements.
 * Bugfixes. 
 
-=== Devonfw OSS Modules
+=== devonfw OSS Modules
 * Existing devonfw IP modules have been moved to OSS. 
 ** They can now be accessed in any OASP4J project as optional dependencies from Maven Central.
 ** The repository now has public access https://github.com/devonfw/devon
@@ -162,28 +162,28 @@ A new version of Devcon has been released. Fixes and new features include:
 
 See: https://github.com/devonfw/devon/wiki#devonfw-modules  
 
-=== Devonfw Shop Floor 
+=== devonfw Shop Floor 
 
-* Devonfw Shop Floor 4 Docker
+* devonfw Shop Floor 4 Docker
 ** Docker-based CICD environment
 *** docker-compose.yml (installation file)
 *** dsf4docker.sh (installation script)
 *** Service Integration (documentation in Wiki)
-** Devonfw projects build and deployment with Docker
+** devonfw projects build and deployment with Docker
 *** Dockerfiles (multi-stage building)
 **** Build artifact (NodeJS for Angular and Maven for Java)
 **** Deploy built artifact (NGINX for Angular and Tomcat for Java)
 **** NGINX Reverse-Proxy to redirect traffic between both Angular client and Java server containers.
-* Devonfw Shop Floor 4 OpenShift
-** Devonfw projects deployment in OpenShift cluster
+* devonfw Shop Floor 4 OpenShift
+** devonfw projects deployment in OpenShift cluster
 *** s2i images
 *** OpenShift templates
 *** Video showcase (OpenShift Origin 3.6)
 
-This incubator is intended to be a compilation of DevOps experiences from the Devonfw perspective. “How we use our Devonfw projects in DevOps environments”. Integration with the Production Line, creation and service integration of a Docker-based CI environment and deploying Devonfw applications in an OpenShift Origin cluster using Devonfw templates.
+This incubator is intended to be a compilation of DevOps experiences from the devonfw perspective. “How we use our devonfw projects in DevOps environments”. Integration with the Production Line, creation and service integration of a Docker-based CI environment and deploying devonfw applications in an OpenShift Origin cluster using devonfw templates.
 See: https://github.com/devonfw/devonfw-shop-floor
 
-=== Devonfw Testing 
+=== devonfw Testing 
 
 The MrChecker Test Framework is an automated testing framework for functional testing of web applications, API web services, Service Virtualization, Security and in coming future native mobile apps, and databases. All modules have tangible examples of how to build resilient integration test cases based on delivered functions. 
 
