@@ -1,6 +1,6 @@
 = Devonfw Guide
  
-Version 2.3-SNAPSHOT
+Version 2.4-SNAPSHOT
 
 == Quick Start with Devonfw
 
