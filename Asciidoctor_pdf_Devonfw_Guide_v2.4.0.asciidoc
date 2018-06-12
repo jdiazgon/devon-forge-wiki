@@ -154,6 +154,8 @@ include::Dockerfile-for-the-maven-based-spring.io-projects.asciidoc[]
 
 include::cookbook-devon-jhipster-module.asciidoc[]
 
+include::Cookbook-OSS-Compliance.asciidoc[]
+
 == Topical Guides for Service Layers
 
 == OASP4J

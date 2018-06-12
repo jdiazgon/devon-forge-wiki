@@ -95,6 +95,7 @@ Version 2.4-SNAPSHOT
 - link:Compatibility-guide-for-Java7-Java8-and-Tomcat7-Tomcat8[Compatibility guide for Java7, Java8, and Tomcat7, Tomcat8]
 - link:Dockerfile-for-the-maven-based-spring.io-projects[Dockerfile for the Maven based spring.io Projects]
 - link:cookbook-devon-jhipster-module[Creating Entity with Devon JHipster Module]
+- link:Cookbook-OSS-Compliance[OSS Compliance]
 
 == Topical Guides for Service Layers
 
