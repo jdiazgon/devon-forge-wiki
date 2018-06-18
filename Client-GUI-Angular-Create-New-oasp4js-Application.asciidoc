@@ -65,7 +65,7 @@ image::images/oasp4js/3.BuildYourOwn/angularcli.JPG[, link="images/oasp4js/3.Bui
 
 In addition, you can set Yarn as the default package manager to use with Angular/CLI running this command: 
 
-`ng set --global packageManager=yarn`
+`ng config -g cli.packageManager yarn`
 
 Finally, once all these tools have been installed successfully, you are ready to create a new project.
 
@@ -175,17 +175,17 @@ $background: map-get($theme, background);
 [source, javascript]
 ----
       "styles": [
-        "styles.css",
-        "theme.scss",
-        "../node_modules/@covalent/core/common/platform.css"
+        "src/styles.css",
+        "src/theme.scss",
+        "node_modules/@covalent/core/common/platform.css"
       ],
 ----
 
 With all of this finally done, we are ready to start the development.
 
-=== Alternative : ng-seed
+=== Alternative: OASP4JS Application Template
 
-Another option is to get this basic project structure with all its dependencies and styles already set is to clone the develop-covalent branch of https://github.com/oasp/oasp4js-ng-project-seed/tree/develop-covalent[ng-project-seed].
+Another option to get this basic project structure with all its dependencies and styles already set is to clone the develop branch of https://github.com/oasp/oasp4js-application-template[OASP4JS Application Template].
 
 Once you have cloned it, move to the project root folder and run a `yarn` to install all dependencies from package.json. The project serves as an example which also comes with some common functionalities already implemented if you want to use them.
 
