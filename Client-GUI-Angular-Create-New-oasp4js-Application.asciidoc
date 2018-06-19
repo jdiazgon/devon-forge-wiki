@@ -884,7 +884,7 @@ export class CodeViewerService {
   constructor() { }
 
   getCode(): Observable<string> {  // later, this will make a call to the server
-    return Observable.of('Q06');   // but, for now, this Observable will do the work
+    return of('Q06');   // but, for now, this Observable will do the work
   }
 
 }
@@ -945,7 +945,7 @@ export class QueueViewerService {
     { code: 'Q05', hour: '14:40', name:  'Richard' },
     { code: 'Q06', hour: '14:50', name: 'Gabin' }];
 
-    return Observable.of(this.queuers);   // but, for now, this Observable will do the work
+    return of(this.queuers);   // but, for now, this Observable will do the work
   }
 }
 ----
