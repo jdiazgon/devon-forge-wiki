@@ -4,7 +4,7 @@
 
 A Contributor License Agreement (CLA) defines the terms under which intellectual property has been contributed to a company or project.
 
-## how CLA-webhook works?
+## How CLA-webhook works?
 
 image::./images/cla/cla-diagram-user.jpg[]
 
