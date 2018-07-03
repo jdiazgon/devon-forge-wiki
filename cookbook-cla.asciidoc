@@ -1,0 +1,159 @@
+# Contributor License Agreement (CLA)
+
+## What is Contributor License Agreement (CLA)?
+
+A Contributor License Agreement (CLA) defines the terms under which intellectual property has been contributed to a company or project.
+
+## how CLA-webhook works?
+
+![](./images/cla/cla-diagram-user.jpg)
+
+When a user want to do a pull request, the webhook try to find if all contributors have signed or not the CLA.
+
+If a user hasn't signed it, then we could see the process that are waiting until it.
+
+![](./images/cla/cla-pr-notsigned.jpg)
+
+**Very important**: Always commit with your GitHub user name and email account. The CLA-webhook is going to request to every user (and email account), that has commited, to sign the CLA. If we commit without our GitHub user name or email account we will not be able to sign the CLA because the CLA-webhook will require to an unexisting user to sign.
+
+![](./images/cla/cla-pr-error.jpg)
+
+To sing it the user only need to press in CLA not signed yet or in Details. We can see that options in the next image.
+
+![](./images/cla/cla-pr-howtosign.jpg)
+
+If it's the first time that he do it, he must accept the cla-assistant conditions.
+
+![](./images/cla/cla-pr-claassistantconditions.jpg)
+
+Then the user can watch the CLA and he must fill the form to sign it.
+
+![](./images/cla/cla-pr-claform.jpg)
+
+And that's all. When the CLA is signed, the data filled is sensitive information and in GitHub, the CLA is public but only the user that signed it can watch the information that he wrote.
+
+## How to configure a CLA?
+
+![](./images/cla/cla-diagram-admin.jpg)
+
+### Prerequisite
+
+To create or add a CLA an admin must be sign into [CLA assistant](https://cla-assistant.io/) and accept the next conditions.
+
+![](./images/cla/cla-permissions.jpg)
+
+Then the admin can see a dashboard like this
+
+![](./images/cla/cla-dashboard-new.jpg)
+
+### How to add a CLA to a GitHub repository
+
+When we sing in [CLA assistant](https://cla-assistant.io/) we can see a dashboard like this
+
+![](./images/cla/cla-dashboard-new.jpg)
+
+Clicking on the **Configure CLA** *(blue button on the top-left corner)* the admin could create or add an exiting CLA to their GitHub repositories.
+This is the interface to add a CLA to a GitHub repository.
+
+![](./images/cla/cla-interface.jpg)
+
+As we can see in the image we have the next fields:
+
+**1st part**
+
+Is for choose when we want to add the webhook for the CLA. The interface list all our repositories but until we can see all our repositories, only can add it if we are an admin of the repository.
+
+![](./images/cla/cla-interface-01.jpg)
+
+If we add one repor that we aren't admin, we could see that the process take a lot of time to finish and in our dashboard we could see that the webhook fail like it's show in the next image.
+
+![](./images/cla/cla-dashboard-webhookerror.jpg)
+
+**2nd part**
+
+Here we can choose one of our existing CLA from the list, or copy a valid link to a CLA. If we want to create a CLA.
+
+![](./images/cla/cla-interface-02.jpg)
+
+To use the same CLA in more than one repository, we must to check **Share the Gist**.
+
+When we have all ready only need to press the **Link** *(blue button)* and then whe can see a confirmation page like this.
+
+![](./images/cla/cla-interface-confirmation.jpg)
+
+When we press **Yes, let's do this!** *(green button)* if all work we should see the next information.
+
+![](./images/cla/cla-interface-done.jpg)
+
+And that's all. Now we can see it in our [CLA assistant](https://cla-assistant.io/).
+
+### How can I create a CLA?
+
+Yo must to log with you GitHub credentials at [gist.github](https://gist.github.com/). Then you should see a dashboard to create a new CLA like this
+
+![](./images/cla/cla-dashboard-githubgist.jpg)
+
+Here you can set the name of the CLA file including extension, a description and the CLA text. Yoy only need to enter a file name and paste the content of your CLA.
+
+It's important to know that when we try it on GitHub if the CLA is written in **asciidoc** it doesn't work. we recommend writting it in **markdown**.
+
+If we want to request the users some data, we can add a form with the CLA. To do that we must to press **add file** *(button)* and call the file as **metadata**. Next I will give an example
+
+```
+{
+  "name": {
+		"title": "Full Name",
+		"type": "string",
+		"githubKey": "name",
+		"required": "true"
+	},
+	"email": {
+		"title": "E-Mail",
+		"type": "string",
+		"githubKey": "email",
+		"required": "true"
+	},	
+	"telephone": {
+            "title": "Telephone",
+            "type": "string"
+        },
+	"address": {
+		"title": "Mailing Address",
+		"type": "textarea"
+	},
+	"country": {
+		"title": "Country",
+		"type": "string"
+	},
+	"thirdparty": {
+		"title": "Submitted on behalf of a third-party",
+		"type": "string",
+		"description": "The name of the third-party. It's the reference '2)[named here]' in the CLA."
+	},
+	"agreement": {
+		"title": "I have read and agree to the CLA",
+		"type": "boolean",
+		"required": "true"
+	}
+}
+```
+
+To know more about the metadata visit [cla-assistant](https://github.com/cla-assistant/cla-assistant#request-more-information-from-the-cla-signer) at GitHub.
+
+## Frequently Asked Questions
+
+**What happens if I edit the Gist file?**
+
+CLA assistant will always show you the current version of your Gist file. Users who accept your CLA sign the current version. If you change the content of your CLA, each contributor has to accept the new version when they create a new pull request.
+
+**What happens if I choose to share the gist with multiple repos or orgs?**
+
+Contributors will simply need to sign only once for any of the repos or orgs linked with the same shared gist.
+
+**Are previous CLA signatures still valid after I choose to share the gist with multiple repos or orgs?**
+
+Yes, but the scope of the previous signatures are still limited to the previous repo or org.
+
+**What happens if I uncheck the box and choose NOT to share the gist any more?**
+
+Previous contributors that have signed the shared gist will have to sign again.

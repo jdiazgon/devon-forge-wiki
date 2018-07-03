@@ -73,6 +73,7 @@ Version 2.4-SNAPSHOT
 
 ==== Advanced Topics
 
+- link:cookbook-cla[Contributor License Agreement (CLA)]
 - link:cookbook-security-layer[Authentication and Authorization]
 - link:getting-started-Data-Access-Layer[Data Access Layer] 
 - link:getting-started-flyway-database-migration[Setup and Maintain Database Schemas With Flyway]
