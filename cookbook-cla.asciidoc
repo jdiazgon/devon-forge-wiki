@@ -6,56 +6,52 @@ A Contributor License Agreement (CLA) defines the terms under which intellectual
 
 ## how CLA-webhook works?
 
-![](./images/cla/cla-diagram-user.jpg)
+image::./images/cla/cla-diagram-user.jpg[]
 
 When a user want to do a pull request, the webhook try to find if all contributors have signed or not the CLA.
 
 If a user hasn't signed it, then we could see the process that are waiting until it.
 
-![](./images/cla/cla-pr-notsigned.jpg)
+image::./images/cla/cla-pr-notsigned.jpg[]
 
 **Very important**: Always commit with your GitHub user name and email account. The CLA-webhook is going to request to every user (and email account), that has commited, to sign the CLA. If we commit without our GitHub user name or email account we will not be able to sign the CLA because the CLA-webhook will require to an unexisting user to sign.
 
-![](./images/cla/cla-pr-error.jpg)
+image::./images/cla/cla-pr-error.jpg[]
 
-To sing it the user only need to press in CLA not signed yet or in Details. We can see that options in the next image.
+To sing it the user only need to press in CLA not signed yet or in Details. We can see this options in the next image.
 
-![](./images/cla/cla-pr-howtosign.jpg)
+image::./images/cla/cla-pr-howtosign.jpg[]
 
 If it's the first time that he do it, he must accept the cla-assistant conditions.
 
-![](./images/cla/cla-pr-claassistantconditions.jpg)
+image::./images/cla/cla-pr-claassistantconditions.jpg[]
 
 Then the user can watch the CLA and he must fill the form to sign it.
 
-![](./images/cla/cla-pr-claform.jpg)
+image::./images/cla/cla-pr-claform.jpg[]
 
 And that's all. When the CLA is signed, the data filled is sensitive information and in GitHub, the CLA is public but only the user that signed it can watch the information that he wrote.
 
 ## How to configure a CLA?
 
-![](./images/cla/cla-diagram-admin.jpg)
+image::./images/cla/cla-diagram-admin.jpg[]
 
 ### Prerequisite
 
-To create or add a CLA an admin must be sign into [CLA assistant](https://cla-assistant.io/) and accept the next conditions.
+To create or add a CLA an admin must be sign into link:https://cla-assistant.io/[CLA assistant] and accept the next conditions.
 
-![](./images/cla/cla-permissions.jpg)
+image::./images/cla/cla-permissions.jpg[]
 
 Then the admin can see a dashboard like this
 
-![](./images/cla/cla-dashboard-new.jpg)
+image::./images/cla/cla-dashboard-new.jpg[]
 
 ### How to add a CLA to a GitHub repository
 
-When we sing in [CLA assistant](https://cla-assistant.io/) we can see a dashboard like this
-
-![](./images/cla/cla-dashboard-new.jpg)
-
-Clicking on the **Configure CLA** *(blue button on the top-left corner)* the admin could create or add an exiting CLA to their GitHub repositories.
+When we sing in link:https://cla-assistant.io/[CLA assistant] we can see a dashboard and clicking on the **Configure CLA** *(blue button on the top-left corner)* the admin could create or add an exiting CLA to their GitHub repositories.
 This is the interface to add a CLA to a GitHub repository.
 
-![](./images/cla/cla-interface.jpg)
+image::./images/cla/cla-interface.jpg[]
 
 As we can see in the image we have the next fields:
 
@@ -63,35 +59,35 @@ As we can see in the image we have the next fields:
 
 Is for choose when we want to add the webhook for the CLA. The interface list all our repositories but until we can see all our repositories, only can add it if we are an admin of the repository.
 
-![](./images/cla/cla-interface-01.jpg)
+image::./images/cla/cla-interface-01.jpg[]
 
 If we add one repor that we aren't admin, we could see that the process take a lot of time to finish and in our dashboard we could see that the webhook fail like it's show in the next image.
 
-![](./images/cla/cla-dashboard-webhookerror.jpg)
+image::./images/cla/cla-dashboard-webhookerror.jpg[]
 
 **2nd part**
 
 Here we can choose one of our existing CLA from the list, or copy a valid link to a CLA. If we want to create a CLA.
 
-![](./images/cla/cla-interface-02.jpg)
+image::./images/cla/cla-interface-02.jpg[]
 
 To use the same CLA in more than one repository, we must to check **Share the Gist**.
 
 When we have all ready only need to press the **Link** *(blue button)* and then whe can see a confirmation page like this.
 
-![](./images/cla/cla-interface-confirmation.jpg)
+image::./images/cla/cla-interface-confirmation.jpg[]
 
 When we press **Yes, let's do this!** *(green button)* if all work we should see the next information.
 
-![](./images/cla/cla-interface-done.jpg)
+image::./images/cla/cla-interface-done.jpg[]
 
-And that's all. Now we can see it in our [CLA assistant](https://cla-assistant.io/).
+And that's all. Now we can see it in our link:https://cla-assistant.io/[CLA assistant].
 
 ### How can I create a CLA?
 
-Yo must to log with you GitHub credentials at [gist.github](https://gist.github.com/). Then you should see a dashboard to create a new CLA like this
+Yo must to log with you GitHub credentials at link:https://gist.github.com/[gist.github]. Then you should see a dashboard to create a new CLA like this
 
-![](./images/cla/cla-dashboard-githubgist.jpg)
+image::./images/cla/cla-dashboard-githubgist.jpg[]
 
 Here you can set the name of the CLA file including extension, a description and the CLA text. Yoy only need to enter a file name and paste the content of your CLA.
 
@@ -138,7 +134,7 @@ If we want to request the users some data, we can add a form with the CLA. To do
 }
 ```
 
-To know more about the metadata visit [cla-assistant](https://github.com/cla-assistant/cla-assistant#request-more-information-from-the-cla-signer) at GitHub.
+To know more about the metadata visit link:https://github.com/cla-assistant/cla-assistant#request-more-information-from-the-cla-signer[cla-assistant] at GitHub.
 
 ## Frequently Asked Questions
 
