@@ -18,7 +18,7 @@ image::./images/cla/cla-pr-notsigned.jpg[]
 
 image::./images/cla/cla-pr-error.jpg[]
 
-To sing it the user only need to press in CLA not signed yet or in Details. We can see this options in the next image.
+To sign it the user only need to press in CLA not signed yet or in Details. We can see this options in the next image.
 
 image::./images/cla/cla-pr-howtosign.jpg[]
 
@@ -42,13 +42,13 @@ To create or add a CLA an admin must be sign into link:https://cla-assistant.io/
 
 image::./images/cla/cla-permissions.jpg[]
 
-Then the admin can see a dashboard like this
+Then the admin can see a dashboard like this.
 
 image::./images/cla/cla-dashboard-new.jpg[]
 
 ### How to add a CLA to a GitHub repository
 
-When we sing in link:https://cla-assistant.io/[CLA assistant] we can see a dashboard and clicking on the **Configure CLA** *(blue button on the top-left corner)* the admin could create or add an exiting CLA to their GitHub repositories.
+When we sign in link:https://cla-assistant.io/[CLA assistant] we can see a dashboard and clicking on the **Configure CLA** *(blue button on the top-left corner)* the admin could create or add an exiting CLA to their GitHub repositories.
 This is the interface to add a CLA to a GitHub repository.
 
 image::./images/cla/cla-interface.jpg[]
@@ -85,7 +85,7 @@ And that's all. Now we can see it in our link:https://cla-assistant.io/[CLA assi
 
 ### How can I create a CLA?
 
-Yo must to log with you GitHub credentials at link:https://gist.github.com/[gist.github]. Then you should see a dashboard to create a new CLA like this
+Yo must to log with you GitHub credentials at link:https://gist.github.com/[gist.github]. Then you should see a dashboard to create a new CLA like this.
 
 image::./images/cla/cla-dashboard-githubgist.jpg[]
 
@@ -93,7 +93,7 @@ Here you can set the name of the CLA file including extension, a description and
 
 It's important to know that when we try it on GitHub if the CLA is written in **asciidoc** it doesn't work. we recommend writting it in **markdown**.
 
-If we want to request the users some data, we can add a form with the CLA. To do that we must to press **add file** *(button)* and call the file as **metadata**. Next I will give an example
+If we want to request the users some data, we can add a form with the CLA. To do that we must to press **add file** *(button)* and call the file as **metadata**. Next I will give an example.
 
 ```
 {
