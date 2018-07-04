@@ -67,7 +67,7 @@ image::./images/cla/cla-dashboard-webhookerror.jpg[]
 
 **2nd part**
 
-Here we can choose one of our existing CLA from the list, or copy a valid link to a CLA. If we want to create a CLA.
+Here we can choose one of our existing CLA from the list, or copy a valid link to a CLA. If we want to create a CLA it's explained in the next section.
 
 image::./images/cla/cla-interface-02.jpg[]
 
