@@ -1,0 +1,22 @@
+= Devonfw Features
+
+The following list shows the features of devonfw.
+
+Disclaimer: The list is most probably incomplete, please help to complete it. Further this is just an intermediate page as we want to have this in a nicer form on the official devonfw homepage.
+
+* General
+** http://www.devonfw.com/[Devonfw Homepage]
+** https://github.com/devonfw/devon-methodology[Methodology] (Design, etc.)
+** https://github.com/oasp/my-thai-star[Demo-App]
+* Tools
+** https://github.com/devonfw/tools-cobigen/#cobigen-code-based-incremental-generator[CobiGen] (incremental Code-Generator)
+** https://github.com/devonfw/devon/wiki/Cookbook-OSS-Compliance[OSS-Compliance] and https://troom.capgemini.com/sites/vcc/engineering/Cross Cutting/Open Source/OSS-Inventory[OSS-Inventory]
+* Java: https://github.com/oasp/oasp4j/[OASP4J] 
+** https://github.com/oasp/oasp4j/wiki[Documentation/Guides] (https://oasp.github.io/assets/PDF/OASP4J.pdf[PDF])
+*** https://github.com/oasp/oasp4j/wiki/guide-rest[REST serivces] (https://github.com/oasp/oasp4j/wiki/guide-service-client[Client])
+*** https://github.com/oasp/oasp4j/wiki/guide-soap[SOAP services] (https://github.com/oasp/oasp4j/wiki/guide-service-client[Client])
+*** https://github.com/oasp/oasp4j/wiki/guide-jpa[JPA]
+*** https://github.com/oasp/oasp4j/wiki/guide-security[Security]
+*** https://github.com/oasp/oasp4j/wiki/guide-validation[Validation]
+** https://github.com/oasp/oasp-tutorial-sources/wiki[Tutorial]
+** Angular: https://github.com/oasp/oasp4js/[OASP4JS]
