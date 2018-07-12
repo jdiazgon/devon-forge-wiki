@@ -36,6 +36,7 @@ Disclaimer: The list is most probably incomplete, please help to complete it. Fu
 * .NET/C#: https://github.com/oasp/oasp4net[OASP4NET]
 ** TODO
 * JS/TS/Node.js: https://github.com/oasp/oasp4fn/[OASP4FN]
+** https://github.com/oasp/oasp4fn-application-template[App template]
 ** TODO
 * Mobile
 ** https://github.com/devonfw/draft-tukl-oasp4mobile[OASP4Mobile] (Draft!)
