@@ -10,11 +10,13 @@ Disclaimer: The list is most probably incomplete, please help to complete it. Fu
 ** https://github.com/oasp/my-thai-star[Demo-App]
 ** https://github.com/devonfw/devon-enterprise/wiki/guide-security-pdf[Security]
 ** https://github.com/devonfw/microservices-book/wiki[Microservices Book]
+** https://github.com/devonfw/we-dev-on[Newsletter]
 * Tools
 ** https://github.com/devonfw/tools-cobigen/#cobigen-code-based-incremental-generator[CobiGen] (incremental Code-Generator)
 ** https://github.com/devonfw/devon/wiki/Cookbook-OSS-Compliance[OSS-Compliance] and https://troom.capgemini.com/sites/vcc/engineering/Cross%20Cutting/Open%20Source/OSS-Inventory[OSS-Inventory]
 ** https://github.com/oasp/oasp4j-ide/wiki[IDE] and https://github.com/devonfw/devon-ide/wiki/mgmt_ide-setup-oomph[OOMPH]
 ** https://github.com/devonfw/devonfw-testing#install[MrChecker] (End-to-end testing framework)
+** https://github.com/devonfw/devon/wiki/devcon-user-guide[Devcon] (Console/CLI for devonfw)
 ** https://github.com/oasp/oasp-docgen/wiki[DocGen] (Documentation Generator for AsciiDoc to PDF on top of asciidoctor)
 * Java: https://github.com/oasp/oasp4j/[OASP4J] 
 ** https://github.com/oasp/oasp4j/wiki[Documentation/Guides] (https://oasp.github.io/assets/PDF/OASP4J.pdf[PDF])
@@ -33,3 +35,5 @@ Disclaimer: The list is most probably incomplete, please help to complete it. Fu
 ** TODO
 * JS/TS/Node.js: https://github.com/oasp/oasp4fn/[OASP4FN]
 ** TODO
+* Middleware, etc.
+** https://github.com/devonfw/portal-gateway[portal-gateway] (Microservice integration portal)
