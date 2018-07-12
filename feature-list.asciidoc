@@ -28,4 +28,6 @@ Disclaimer: The list is most probably incomplete, please help to complete it. Fu
 ** https://github.com/oasp/oasp-tutorial-sources/wiki[Tutorial]
 ** https://github.com/devonfw/ng-training#angular-training-powered-by-devonfw[Training] (http://www.devonfw.com/ng-training[Slides])
 * .NET/C#: OASP4NET
-* JS/TS/Node.js: OASP4FN
+** TODO
+* JS/TS/Node.js: https://github.com/oasp/oasp4fn/[OASP4FN]
+** TODO
