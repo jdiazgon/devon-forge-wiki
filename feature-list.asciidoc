@@ -14,6 +14,7 @@ Disclaimer: The list is most probably incomplete, please help to complete it. Fu
 ** https://github.com/devonfw/devon/wiki/Cookbook-OSS-Compliance[OSS-Compliance] and https://troom.capgemini.com/sites/vcc/engineering/Cross%20Cutting/Open%20Source/OSS-Inventory[OSS-Inventory]
 ** https://github.com/oasp/oasp4j-ide/wiki[IDE] and https://github.com/devonfw/devon-ide/wiki/mgmt_ide-setup-oomph[OOMPH]
 ** https://github.com/devonfw/devonfw-testing#install[MrChecker] (End-to-end testing framework)
+** https://github.com/oasp/oasp-docgen/wiki[DocGen] (Documentation Generator for AsciiDoc to PDF on top of asciidoctor)
 * Java: https://github.com/oasp/oasp4j/[OASP4J] 
 ** https://github.com/oasp/oasp4j/wiki[Documentation/Guides] (https://oasp.github.io/assets/PDF/OASP4J.pdf[PDF])
 *** https://github.com/oasp/oasp4j/wiki/guide-rest[REST serivces] (https://github.com/oasp/oasp4j/wiki/guide-service-client[Client])
