@@ -42,5 +42,6 @@ Disclaimer: The list is most probably incomplete, please help to complete it. Fu
 ** https://github.com/oasp/oasp4x[OASP4X] (Xamarin)
 ** https://github.com/oasp/oasp4js-ionic-application-template[Ionic app template]
 ** https://github.com/devonfw/draft-tukl-oasp4mobile[OASP4Mobile] (Draft!)
-* Middleware, etc.
+* Middleware, Platform, etc.
+** https://github.com/oasp/s2i[S2I] (Support to run devonfw on OpenShift)
 ** https://github.com/devonfw/portal-gateway[portal-gateway] (Microservice integration portal)
