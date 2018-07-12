@@ -18,6 +18,7 @@ Disclaimer: The list is most probably incomplete, please help to complete it. Fu
 ** https://github.com/devonfw/devonfw-testing#install[MrChecker] (End-to-end testing framework)
 ** https://github.com/devonfw/devon/wiki/devcon-user-guide[Devcon] (Console/CLI for devonfw)
 ** https://github.com/oasp/oasp-docgen/wiki[DocGen] (Documentation Generator for AsciiDoc to PDF on top of asciidoctor)
+** https://github.com/oasp/asciidoc-link-checker[LinkChecker] (Verifies links in documentation)
 ** https://github.com/oasp-forge/sonarqube-devon-plugin[sonarqube-devon-plugin] (to validate Devonfw architecture in SonarQube)
 ** https://github.com/devonfw/tools-depman[DepMan] (Analyzes and visualized dependencies between apps/microservices)
 * Java: https://github.com/oasp/oasp4j/[OASP4J] 
