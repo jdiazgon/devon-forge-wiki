@@ -32,20 +32,23 @@ Disclaimer: The list is most probably incomplete, please help to complete it. Fu
 ** https://github.com/oasp/oasp-tutorial-sources/wiki[Tutorial]
 ** https://coconet.capgemini.com/sf/docman/do/listDocuments/projects.apps2_devon/docman.root.devonfw.training.training_material.specific.backend.java[Training]
 ** https://github.com/oasp/oasp4j/wiki/guide-security[Security]
-* Angular: https://github.com/oasp/oasp4js/[OASP4JS]
+* Angular
+** https://github.com/oasp/oasp4js/[OASP4JS]
 ** https://github.com/oasp/oasp-tutorial-sources/wiki[Tutorial]
 ** https://github.com/devonfw/ng-training#angular-training-powered-by-devonfw[Training] (http://www.devonfw.com/ng-training[Slides])
 ** https://github.com/oasp/oasp4js-ng-project-seed[App template]
 * .NET/C#: https://github.com/oasp/oasp4net/tree/develop[OASP4NET]
 ** http://oasp4net.github.io[Documentation]
 ** https://www.nuget.org/packages?q=oasp[Nuget packages]
-* JS/TS/Node.js: https://github.com/oasp/oasp4fn/[OASP4FN]
+* Node.js
+** https://github.com/oasp/oasp4fn/[OASP4FN]
 ** https://github.com/oasp/oasp4fn-application-template[App template]
-** TODO
 * Mobile
 ** https://github.com/oasp/oasp4x[OASP4X] (Xamarin)
 ** https://github.com/oasp/oasp4js-ionic-application-template[Ionic app template]
 ** https://github.com/devonfw/draft-tukl-oasp4mobile[OASP4Mobile] (Draft!)
-* Middleware, Platform, etc.
+* DevOps
+** https://github.com/devonfw/devonfw-shop-floor[Devonfw Shop Floor]
 ** https://github.com/oasp/s2i[S2I] (Support to run devonfw on OpenShift)
+* Middleware, Platform, etc.
 ** https://github.com/devonfw/portal-gateway[portal-gateway] (Microservice integration portal)
