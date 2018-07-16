@@ -38,6 +38,7 @@ Disclaimer: The list is most probably incomplete, please help to complete it. Fu
 ** https://github.com/oasp/oasp4js-ng-project-seed[App template]
 * .NET/C#: https://github.com/oasp/oasp4net/tree/develop[OASP4NET]
 ** http://oasp4net.github.io[Documentation]
+** https://www.nuget.org/packages?q=oasp[Nuget packages]
 * JS/TS/Node.js: https://github.com/oasp/oasp4fn/[OASP4FN]
 ** https://github.com/oasp/oasp4fn-application-template[App template]
 ** TODO
