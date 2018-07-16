@@ -36,8 +36,8 @@ Disclaimer: The list is most probably incomplete, please help to complete it. Fu
 ** https://github.com/oasp/oasp-tutorial-sources/wiki[Tutorial]
 ** https://github.com/devonfw/ng-training#angular-training-powered-by-devonfw[Training] (http://www.devonfw.com/ng-training[Slides])
 ** https://github.com/oasp/oasp4js-ng-project-seed[App template]
-* .NET/C#: https://github.com/oasp/oasp4net[OASP4NET]
-** TODO
+* .NET/C#: https://github.com/oasp/oasp4net/tree/develop[OASP4NET]
+** http://oasp4net.github.io[Documentation]
 * JS/TS/Node.js: https://github.com/oasp/oasp4fn/[OASP4FN]
 ** https://github.com/oasp/oasp4fn-application-template[App template]
 ** TODO
