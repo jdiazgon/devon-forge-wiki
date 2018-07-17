@@ -6,7 +6,7 @@ To update the distribution follow the steps below in each section
 
 ### Sample Application
 - Add property **<flyway.version>4.2.0</flyway.version>** to file _workspaces/examples/oasp4j/samples/pom.xml_.
-- In the same file i.e _workspaces/examples/oasp4j/samples/pom.xml_ add _flyway-core_ dependency given below under _dependency_management_ section. Note: It should be the first dependency under _dependency_management_.
+- In the same file i.e _workspaces/examples/oasp4j/samples/pom.xml_ add **flyway-core** dependency given below under _dependency_management_ section. Note: **It should be the first dependency under _dependency_management_**.
 
 ```xml
 <dependency>
@@ -16,8 +16,8 @@ To update the distribution follow the steps below in each section
 <dependency>
 ```
 
-- Remove version parameter for dependency _flyway-core_ in file _workspaces/examples/oasp4j/samples/core/pom.xml_.
-- Add _flyway-core_ dependency below to _dependencies_ section of file _workspaces/examples/oasp4j/samples/server/pom.xml_
+- Remove **version** parameter for dependency **flyway-core** in file _workspaces/examples/oasp4j/samples/core/pom.xml_.
+- Add **flyway-core** dependency below to _dependencies_ section of file _workspaces/examples/oasp4j/samples/server/pom.xml_
 
 ```xml
 <dependency>
@@ -27,9 +27,9 @@ To update the distribution follow the steps below in each section
 ```
 ### BOM Module
 - Delete all files inside directory _workspaces/examples/oasp4j/bom_.
-- Rename direectory _bom_ to _boms_.
-- Create two new directories _bom_ and _minimal_ inside _boms_ directory.
-- Create a new _pom.xml_ file inside _boms_ directory and add the code below
+- Rename direectory **bom **to **boms**.
+- Create two new directories **bom** and **minimal** inside _boms_ directory.
+- Create a new **pom.xml** file inside _boms_ directory and add the code below
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
