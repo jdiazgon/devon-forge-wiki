@@ -1,18 +1,20 @@
 :toc: macro
 toc::[]
 
-== Templates
-- Replace _<delimiter>^*^</delimiter>_ with _<delimiter>$[*]</delimiter>_ in file _workspaces/examples/oasp4j/templates/server/pom.xml_.
+= Templates
+- Replace the delimiter value _<delimiter>^*^</delimiter>_ with _<delimiter>$[*]</delimiter>_ in file _workspaces/examples/oasp4j/templates/server/pom.xml_.
 - Change property **oasp4j.version** from _2.6.0_ to _$[oasp4j.version]_ in file _workspaces/examples/oasp4j/templates/server/src/main/resources/archetype-resources/pom.xml_.
 
-== Sample Application
+= Sample Application
 - Add property **<flyway.version>4.2.0</flyway.version>** to file _workspaces/examples/oasp4j/samples/pom.xml_.
 - In the same file i.e _workspaces/examples/oasp4j/samples/pom.xml_ add _flyway-core_ dependency given below under _dependency_management_ section. Note: It should be the first dependency under _dependency_management_.
+
 `<dependency>
   <groupId>org.flywaydb</groupId>
   <artifactId>flyway-core</artifactId>
   <version>${flyway.version}</version>
 dependency>`
+
 - Remove version parameter for dependency _flyway-core_ in file _workspaces/examples/oasp4j/samples/core/pom.xml_.
 - Add _flyway-core_ dependency below to _dependencies_ section of file _workspaces/examples/oasp4j/samples/server/pom.xml_
 `<dependency>
@@ -20,7 +22,7 @@ dependency>`
    <artifactId>flyway-core</artifactId>
  </dependency>`
 
-== BOM Module
+= BOM Module
 - Delete all files inside directory _workspaces/examples/oasp4j/bom_.
 - Rename direectory _bom_ to _boms_.
 - Create two new directories _bom_ and _minimal_ inside _boms_ directory.
@@ -467,7 +469,7 @@ dependency>`
 </project>`
 - Change module name from _bom_ to _boms_ in file _workspaces/examples/oasp4j/pom.xml_
 
-== Version
+= Version
 - Change value for property _oasp4j.version_ from _2.6.0_ to _2.6.1_ in file _workspaces/examples/oasp4j/pom.xml_
 
  
