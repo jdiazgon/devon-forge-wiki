@@ -1,6 +1,3 @@
-:toc: macro
-toc::[]
-
 = Templates
 - Replace the delimiter value _<delimiter>^*^</delimiter>_ with _<delimiter>$[*]</delimiter>_ in file _workspaces/examples/oasp4j/templates/server/pom.xml_.
 - Change property **oasp4j.version** from _2.6.0_ to _$[oasp4j.version]_ in file _workspaces/examples/oasp4j/templates/server/src/main/resources/archetype-resources/pom.xml_.
@@ -14,22 +11,26 @@ toc::[]
   <groupId>org.flywaydb</groupId>
   <artifactId>flyway-core</artifactId>
   <version>${flyway.version}</version>
-dependency>
+<dependency>
 ```
 
 - Remove version parameter for dependency _flyway-core_ in file _workspaces/examples/oasp4j/samples/core/pom.xml_.
 - Add _flyway-core_ dependency below to _dependencies_ section of file _workspaces/examples/oasp4j/samples/server/pom.xml_
-`<dependency>
+
+```xml
+<dependency>
    <groupId>org.flywaydb</groupId>
    <artifactId>flyway-core</artifactId>
- </dependency>`
-
+ </dependency>
+```
 = BOM Module
 - Delete all files inside directory _workspaces/examples/oasp4j/bom_.
 - Rename direectory _bom_ to _boms_.
 - Create two new directories _bom_ and _minimal_ inside _boms_ directory.
 - Create a new _pom.xml_ file inside _boms_ directory and add the code below
-`<?xml version="1.0" encoding="UTF-8"?>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
@@ -48,9 +49,13 @@ dependency>
     <module>bom</module>
   </modules>
 
-</project>`
+</project>
+```
+
 - Create a new _pom.xml_ file inside _minimal_ directory and add the code below
-`<?xml version="1.0" encoding="UTF-8"?>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
@@ -206,9 +211,13 @@ dependency>
     </dependencies>
   </dependencyManagement>
 
-</project>`
+</project>
+```
+
 - Create a new _pom.xml_ file inside _bom_ directory and add the code below
-`<?xml version="1.0" encoding="UTF-8"?>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
@@ -468,7 +477,9 @@ dependency>
     </dependencies>
   </dependencyManagement>
 
-</project>`
+</project>
+```
+
 - Change module name from _bom_ to _boms_ in file _workspaces/examples/oasp4j/pom.xml_
 
 = Version
