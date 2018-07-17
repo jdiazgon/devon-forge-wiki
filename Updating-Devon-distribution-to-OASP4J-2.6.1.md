@@ -485,7 +485,7 @@ To update the distribution follow the steps below in each section
 - Change ```<module>bom</module>``` to ```<module>boms</module>``` in file _workspaces/examples/oasp4j/pom.xml_
 
 ### Version
-- Change ```<oasp4j.version>2.6.0</oasp4j.version>``` to <oasp4j.version>2.6.1</oasp4j.version> in file _workspaces/examples/oasp4j/pom.xml_
+- Change ```<oasp4j.version>2.6.0</oasp4j.version>``` to ```<oasp4j.version>2.6.1</oasp4j.version>``` in file _workspaces/examples/oasp4j/pom.xml_
 
 **Finally**, Go to the root of OASP4J project i.e _workspaces/examples/oasp4j/ and run
 
