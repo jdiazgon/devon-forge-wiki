@@ -27,9 +27,9 @@ To update the distribution follow the steps below in each section
 ```
 ### BOM Module
 - Delete all files inside directory _workspaces/examples/oasp4j/bom_.
-- Rename direectory **bom **to **boms**.
-- Create two new directories **bom** and **minimal** inside _boms_ directory.
-- Create a new **pom.xml** file inside _boms_ directory and add the code below
+- Rename direectory **bom** to **boms**.
+- Create two new directories **bom** and **minimal** inside **boms** directory.
+- Create a new **pom.xml** file inside **boms** directory and add the code below
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -54,7 +54,7 @@ To update the distribution follow the steps below in each section
 </project>
 ```
 
-- Create a new _pom.xml_ file inside _minimal_ directory and add the code below
+- Create a new **pom.xml** file inside **minimal** directory and add the code below
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -216,7 +216,7 @@ To update the distribution follow the steps below in each section
 </project>
 ```
 
-- Create a new _pom.xml_ file inside _bom_ directory and add the code below
+- Create a new **pom.xml** file inside **bom** directory and add the code below
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -482,12 +482,12 @@ To update the distribution follow the steps below in each section
 </project>
 ```
 
-- Change module name from _bom_ to _boms_ in file _workspaces/examples/oasp4j/pom.xml_
+- Change ```<module>bom</module>``` to ```<module>boms</module>``` in file _workspaces/examples/oasp4j/pom.xml_
 
 ### Version
-- Change value for property _oasp4j.version_ from _2.6.0_ to _2.6.1_ in file _workspaces/examples/oasp4j/pom.xml_
+- Change ```<oasp4j.version>2.6.0</oasp4j.version>``` to <oasp4j.version>2.6.1</oasp4j.version> in file _workspaces/examples/oasp4j/pom.xml_
 
-Finally, Go to the root of OASP4J project i.e _workspaces/examples/oasp4j/ and run
+**Finally**, Go to the root of OASP4J project i.e _workspaces/examples/oasp4j/ and run
 
 ```
 mvn clean install
