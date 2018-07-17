@@ -9,11 +9,13 @@ toc::[]
 - Add property **<flyway.version>4.2.0</flyway.version>** to file _workspaces/examples/oasp4j/samples/pom.xml_.
 - In the same file i.e _workspaces/examples/oasp4j/samples/pom.xml_ add _flyway-core_ dependency given below under _dependency_management_ section. Note: It should be the first dependency under _dependency_management_.
 
-`<dependency>
+```xml
+<dependency>
   <groupId>org.flywaydb</groupId>
   <artifactId>flyway-core</artifactId>
   <version>${flyway.version}</version>
-dependency>`
+dependency>
+```
 
 - Remove version parameter for dependency _flyway-core_ in file _workspaces/examples/oasp4j/samples/core/pom.xml_.
 - Add _flyway-core_ dependency below to _dependencies_ section of file _workspaces/examples/oasp4j/samples/server/pom.xml_
