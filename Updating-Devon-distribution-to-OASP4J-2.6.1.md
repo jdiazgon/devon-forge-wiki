@@ -1,8 +1,10 @@
-# Templates
+To update the distribution follow the steps below in each section
+
+### Templates
 - Replace the delimiter value _<delimiter>^*^</delimiter>_ with _<delimiter>$[*]</delimiter>_ in file _workspaces/examples/oasp4j/templates/server/pom.xml_.
 - Change property **oasp4j.version** from _2.6.0_ to _$[oasp4j.version]_ in file _workspaces/examples/oasp4j/templates/server/src/main/resources/archetype-resources/pom.xml_.
 
-= Sample Application
+## Sample Application
 - Add property **<flyway.version>4.2.0</flyway.version>** to file _workspaces/examples/oasp4j/samples/pom.xml_.
 - In the same file i.e _workspaces/examples/oasp4j/samples/pom.xml_ add _flyway-core_ dependency given below under _dependency_management_ section. Note: It should be the first dependency under _dependency_management_.
 
