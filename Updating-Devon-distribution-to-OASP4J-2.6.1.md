@@ -1,8 +1,8 @@
 To update the distribution follow the steps below in each section
 
 ### Templates
-- Replace the delimiter value _<delimiter>^*^</delimiter>_ with _<delimiter>$[*]</delimiter>_ in file _workspaces/examples/oasp4j/templates/server/pom.xml_.
-- Change property **oasp4j.version** from _2.6.0_ to _$[oasp4j.version]_ in file _workspaces/examples/oasp4j/templates/server/src/main/resources/archetype-resources/pom.xml_.
+- Replace the delimiter value ```<delimiter>^*^</delimiter>``` with ```<delimiter>$[*]</delimiter>``` in file _workspaces/examples/oasp4j/templates/server/pom.xml_.
+- Change property **oasp4j.version** from **2.6.0** to **$[oasp4j.version]** in file _workspaces/examples/oasp4j/templates/server/src/main/resources/archetype-resources/pom.xml_.
 
 ### Sample Application
 - Add property **<flyway.version>4.2.0</flyway.version>** to file _workspaces/examples/oasp4j/samples/pom.xml_.
