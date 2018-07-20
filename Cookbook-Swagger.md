@@ -1,10 +1,11 @@
-== Integrating Swagger in Devon
 
-=== Features
+## Integrating Swagger in Devon
+
+### Features
 * Generation of Swagger JSON docs.
 * Conversion of Swagger JSON docs to OpenAPI JSON.
 
-=== Setup 
+### Setup 
 * Add the following dependencies to project's pom.xml, here property `cxf.version` is set to **3.1.5**
 
 ```xml
@@ -75,7 +76,7 @@
     return endpoint.create();
   }
 `
-=== You can find the complete source code for this demo at repo below
+### You can find the complete source code for this demo at repo below
 
 > https://github.com/AbhayChandel/devon-with-swagger
 * Swagger JSON Doc can be accessed at
