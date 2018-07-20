@@ -6,12 +6,9 @@
 * Conversion of Swagger JSON docs to OpenAPI JSON.
 
 ### Configuration Steps 
-* Add the following dependencies to <project>-core pom.xml, here property `cxf.version` is set to **3.1.5**
+* Add the following dependencies to ```xml<project>-core``` pom.xml, here property `cxf.version` is set to **3.1.5**
 
 ```xml
-
-
-
 <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
