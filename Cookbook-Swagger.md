@@ -58,21 +58,22 @@ private String basePath;
   result.setSchemes(new String[] { "http", "https" });
   return result;
 }
+```
 
 * Create a JAXRS server bean
+```
+@Bean
+public Server rsServer() {
 
-     @Bean
-     public Server rsServer() {
-
-       JAXRSServerFactoryBean endpoint = new JAXRSServerFactoryBean();
-       endpoint.setBus(this.bus);
-       endpoint.setServiceBeans(Arrays.<Object> asList(new GeneralRestServiceImpl()));
-       endpoint.setAddress("/");
-       endpoint.setFeatures(Arrays.asList(this.swagger2Feature));
-       endpoint.setProvider(new SwaggerToOpenApiConversionFilter());
-       return endpoint.create();
-     }
-
+  JAXRSServerFactoryBean endpoint = new JAXRSServerFactoryBean();
+  endpoint.setBus(this.bus);
+  endpoint.setServiceBeans(Arrays.<Object> asList(new GeneralRestServiceImpl()));
+  endpoint.setAddress("/");
+  endpoint.setFeatures(Arrays.asList(this.swagger2Feature));
+  endpoint.setProvider(new SwaggerToOpenApiConversionFilter());
+  return endpoint.create();
+}
+```
 ### You can find the complete source code for this demo at repo below
 
      https://github.com/AbhayChandel/devon-with-swagger
@@ -81,7 +82,7 @@ Swagger JSON Doc can be accessed at
 
      http://localhost:8081/services/api-docs?url=/services/swagger.json
      
- Open API JSON Doc can be accessed at
+Open API JSON Doc can be accessed at
 
      http://localhost:8081/services/api-docs?url=/services/openapi.json
 
