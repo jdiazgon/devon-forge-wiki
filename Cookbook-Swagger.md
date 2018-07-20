@@ -42,22 +42,22 @@
 </dependency>
 ```
 * Add CXF feature bean below. Set `cxf.path` in `application.properties` file
+```
+@Value("${cxf.path}")
+private String basePath;
 
-     @Value("${cxf.path}")
-     private String basePath;
-
-     @Bean("swagger2Feature")
-     public Feature swagger2Feature() {
-       Swagger2Feature result = new Swagger2Feature();
-       result.setTitle("Demo for integration of Devon application wtih Swagger");
-       result.setDescription(
+  @Bean("swagger2Feature")
+  public Feature swagger2Feature() {
+  Swagger2Feature result = new Swagger2Feature();
+  result.setTitle("Demo for integration of Devon application wtih Swagger");
+  result.setDescription(
         "This is a demo for integration of Swagger into a Devon application using CXF. Additionally, it has been configured" + " to convert Swagger JSON produced by CXF Swagger2Feature into Open API JSON");
-       result.setBasePath(this.basePath);
-       result.setVersion("v1");
-       result.setContact("Abhay Chandel");
-       result.setSchemes(new String[] { "http", "https" });
-       return result;
-     }
+  result.setBasePath(this.basePath);
+  result.setVersion("v1");
+  result.setContact("Abhay Chandel");
+  result.setSchemes(new String[] { "http", "https" });
+  return result;
+}
 
 * Create a JAXRS server bean
 
