@@ -43,44 +43,45 @@
 ```
 * Add CXF feature bean below. Set `cxf.path` in `application.properties` file
 
-    @Value("${cxf.path}")
-    private String basePath;
+     @Value("${cxf.path}")
+     private String basePath;
 
-    @Bean("swagger2Feature")
-    public Feature swagger2Feature() {
-
-      Swagger2Feature result = new Swagger2Feature();
-      result.setTitle("Demo for integration of Devon application wtih Swagger");
-      result.setDescription(
-        "This is a demo for integration of Swagger into a Devon application using CXF. Additionally, it has been configured"
-            + " to convert Swagger JSON produced by CXF Swagger2Feature into Open API JSON");
-      result.setBasePath(this.basePath);
-      result.setVersion("v1");
-      result.setContact("Abhay Chandel");
-      result.setSchemes(new String[] { "http", "https" });
-      return result;
-    }
+     @Bean("swagger2Feature")
+     public Feature swagger2Feature() {
+       Swagger2Feature result = new Swagger2Feature();
+       result.setTitle("Demo for integration of Devon application wtih Swagger");
+       result.setDescription(
+        "This is a demo for integration of Swagger into a Devon application using CXF. Additionally, it has been configured" + " to convert Swagger JSON produced by CXF Swagger2Feature into Open API JSON");
+       result.setBasePath(this.basePath);
+       result.setVersion("v1");
+       result.setContact("Abhay Chandel");
+       result.setSchemes(new String[] { "http", "https" });
+       return result;
+     }
 
 * Create a JAXRS server bean
 
-`@Bean
-  public Server rsServer() {
+     @Bean
+     public Server rsServer() {
 
-    // setup CXF-RS
-    JAXRSServerFactoryBean endpoint = new JAXRSServerFactoryBean();
-    endpoint.setBus(this.bus);
-    endpoint.setServiceBeans(Arrays.<Object> asList(new GeneralRestServiceImpl()));
-    endpoint.setAddress("/");
-    endpoint.setFeatures(Arrays.asList(this.swagger2Feature));
-    endpoint.setProvider(new SwaggerToOpenApiConversionFilter());
-    return endpoint.create();
-  }
-`
+       JAXRSServerFactoryBean endpoint = new JAXRSServerFactoryBean();
+       endpoint.setBus(this.bus);
+       endpoint.setServiceBeans(Arrays.<Object> asList(new GeneralRestServiceImpl()));
+       endpoint.setAddress("/");
+       endpoint.setFeatures(Arrays.asList(this.swagger2Feature));
+       endpoint.setProvider(new SwaggerToOpenApiConversionFilter());
+       return endpoint.create();
+     }
+
 ### You can find the complete source code for this demo at repo below
 
-> https://github.com/AbhayChandel/devon-with-swagger
-* Swagger JSON Doc can be accessed at
-> http://localhost:8081/services/api-docs?url=/services/swagger.json
-* Open API JSON Doc can be accessed at
-> http://localhost:8081/services/api-docs?url=/services/openapi.json
+     https://github.com/AbhayChandel/devon-with-swagger
+
+Swagger JSON Doc can be accessed at
+
+     http://localhost:8081/services/api-docs?url=/services/swagger.json
+     
+ Open API JSON Doc can be accessed at
+
+     http://localhost:8081/services/api-docs?url=/services/openapi.json
 
