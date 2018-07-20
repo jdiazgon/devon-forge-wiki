@@ -76,7 +76,7 @@ public Server rsServer() {
 ```
 ### You can find the complete source code for this demo at repo below
 
-     https://github.com/AbhayChandel/devon-with-swagger
+     https://github.com/devonfw/devonfw-swagger-gen-demo
 
 Swagger JSON Doc can be accessed at
 
