@@ -1,11 +1,3 @@
-:toc: macro
-toc::[]
-
-:doctype: book
-:reproducible:
-:source-highlighter: rouge
-:listing-caption: Listing
-
 == Integrating Swagger in Devon
 
 === Features
@@ -13,7 +5,7 @@ toc::[]
 * Conversion of Swagger JSON docs to OpenAPI JSON.
 
 === Setup 
-* Add the following dependencies, here property cxf.version is set to 3.1.5
+* Add the following dependencies to project's pom.xml, here property `cxf.version` is set to **3.1.5**
 
 ```xml
 <dependency>
@@ -48,26 +40,28 @@ toc::[]
       <scope>provided</scope>
 </dependency>
 ```
-* Add CXF feature bean below. Set <cxf.path> in application.properties file
-`@Value("${cxf.path}")
-  private String basePath;
+* Add CXF feature bean below. Set `cxf.path` in `application.properties` file
 
-  @Bean("swagger2Feature")
-  public Feature swagger2Feature() {
+    @Value("${cxf.path}")
+    private String basePath;
 
-    Swagger2Feature result = new Swagger2Feature();
-    result.setTitle("Demo for integration of Devon application wtih Swagger");
-    result.setDescription(
+    @Bean("swagger2Feature")
+    public Feature swagger2Feature() {
+
+      Swagger2Feature result = new Swagger2Feature();
+      result.setTitle("Demo for integration of Devon application wtih Swagger");
+      result.setDescription(
         "This is a demo for integration of Swagger into a Devon application using CXF. Additionally, it has been configured"
             + " to convert Swagger JSON produced by CXF Swagger2Feature into Open API JSON");
-    result.setBasePath(this.basePath);
-    result.setVersion("v1");
-    result.setContact("Abhay Chandel");
-    result.setSchemes(new String[] { "http", "https" });
-    return result;
-  }
-`
+      result.setBasePath(this.basePath);
+      result.setVersion("v1");
+      result.setContact("Abhay Chandel");
+      result.setSchemes(new String[] { "http", "https" });
+      return result;
+    }
+
 * Create a JAXRS server bean
+
 `@Bean
   public Server rsServer() {
 
@@ -82,6 +76,7 @@ toc::[]
   }
 `
 === You can find the complete source code for this demo at repo below
+
 > https://github.com/AbhayChandel/devon-with-swagger
 * Swagger JSON Doc can be accessed at
 > http://localhost:8081/services/api-docs?url=/services/swagger.json
