@@ -5,7 +5,7 @@
 * Generation of Swagger JSON docs.
 * Conversion of Swagger JSON docs to OpenAPI JSON.
 
-### Setup 
+### Configuration Steps 
 * Add the following dependencies to project's pom.xml, here property `cxf.version` is set to **3.1.5**
 
 ```xml
@@ -41,7 +41,7 @@
       <scope>provided</scope>
 </dependency>
 ```
-* Add CXF feature bean below. Set `cxf.path` in `application.properties` file
+* Add CXF `Feature` bean below. Set `cxf.path` in `application.properties` file
 ```
 @Value("${cxf.path}")
 private String basePath;
@@ -60,7 +60,7 @@ private String basePath;
 }
 ```
 
-* Create a JAXRS server bean
+* Create a JAXRS `Server` bean
 ```
 @Bean
 public Server rsServer() {
