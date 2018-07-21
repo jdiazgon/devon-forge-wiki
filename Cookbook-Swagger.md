@@ -41,17 +41,37 @@
       <scope>provided</scope>
 </dependency>
 ```
+
+* Mark REST services as a Swagger resource with `@Api` annotation as shown below
+```
+@Path("/general/v1")
+@Api(value = "General Rest Server", consumes = MediaType.APPLICATION_JSON, produces = MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)
+@Produces(MediaType.APPLICATION_JSON)
+public interface GeneralRestService 
+```
+
+* Use Swagger annotations to describe REST method operations as shown below
+```
+@GET
+  @Path("/staffmember/{id}/")
+  @ApiOperation(value = "Finds Staff Member with Id - (version in URL)")
+  @ApiResponses(value = {
+  @ApiResponse(code = 200, message = "StaffMember resource found", response = StaffMemberEto.class),
+  @ApiResponse(code = 404, message = "StaffMember resource not found") })
+  public StaffMemberEto getStaffMember(@PathParam("id") long id);
+```
+
 * Add CXF `Feature` bean below. Set `cxf.path` in `application.properties` file
 ```
 @Value("${cxf.path}")
 private String basePath;
 
-  @Bean("swagger2Feature")
-  public Feature swagger2Feature() {
+@Bean("swagger2Feature")
+public Feature swagger2Feature() {
   Swagger2Feature result = new Swagger2Feature();
   result.setTitle("Demo for integration of Devon application wtih Swagger");
-  result.setDescription(
-        "This is a demo for integration of Swagger into a Devon application using CXF. Additionally, it has been configured" + " to convert Swagger JSON produced by CXF Swagger2Feature into Open API JSON");
+  result.setDescription("This is a demo for integration of Swagger into a Devon application using CXF. Additionally, it " + " has been configured to convert Swagger JSON produced by CXF Swagger2Feature into Open API JSON");
   result.setBasePath(this.basePath);
   result.setVersion("v1");
   result.setContact("Abhay Chandel");
