@@ -54,12 +54,12 @@ public interface GeneralRestService
 * Use Swagger annotations to describe REST method operations as shown below
 ```
 @GET
-  @Path("/staffmember/{id}/")
-  @ApiOperation(value = "Finds Staff Member with Id - (version in URL)")
-  @ApiResponses(value = {
-  @ApiResponse(code = 200, message = "StaffMember resource found", response = StaffMemberEto.class),
-  @ApiResponse(code = 404, message = "StaffMember resource not found") })
-  public StaffMemberEto getStaffMember(@PathParam("id") long id);
+@Path("/staffmember/{id}/")
+@ApiOperation(value = "Finds Staff Member with Id - (version in URL)")
+@ApiResponses(value = {
+@ApiResponse(code = 200, message = "StaffMember resource found", response = StaffMemberEto.class),
+@ApiResponse(code = 404, message = "StaffMember resource not found") })
+public StaffMemberEto getStaffMember(@PathParam("id") long id);
 ```
 
 * Add CXF `Feature` bean below. Set `cxf.path` in `application.properties` file
