@@ -82,6 +82,12 @@ public Feature swagger2Feature() {
 
 * Create a JAXRS `Server` bean. Autowire `Swagger2Feature` bean configured in previous step and CFX `Bus`. And pass them to the server bean. 
 ```
+@Autowired
+private Bus bus;
+
+@Autowired
+private Feature swagger2Feature;
+
 @Bean
 public Server rsServer() {
 
