@@ -62,7 +62,7 @@ public interface GeneralRestService
 public StaffMemberEto getStaffMember(@PathParam("id") long id);
 ```
 
-* Add CXF `Feature` bean below. Set `cxf.path` in `application.properties` file
+* Configure CXF `Feature` bean as per project's REST service. Set `cxf.path` in `application.properties` file
 ```
 @Value("${cxf.path}")
 private String basePath;
@@ -80,7 +80,7 @@ public Feature swagger2Feature() {
 }
 ```
 
-* Create a JAXRS `Server` bean
+* Create a JAXRS `Server` bean. Autowire `Swagger2Feature` bean configured in previous step and CFX `Bus`. And pass them to the server bean. 
 ```
 @Bean
 public Server rsServer() {
