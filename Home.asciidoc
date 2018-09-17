@@ -154,6 +154,7 @@ Version 2.4-SNAPSHOT
 - link:oasp4js-angular-i18n[OASP4JS Angular i18n]
 - link:Client-GUI-Angular-a11y-accessibility[OASP4JS Angular A11y Accessibility]
 - link:Client-GUI-Angular-Update-Angular-CLI[OASP4JS Update Angular CLI]
+- link:Client-GUI-Angular-Add-Electron[Add Electron to your Angular application]
 
 === Devon4Sencha
 

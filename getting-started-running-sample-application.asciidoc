@@ -162,7 +162,7 @@ The simple way to run the My Thai Star Angular client is using npm or yarn comma
 
 [source,bash]
 ----
-$ npm run serve                     # OASP4J server
+$ npm run start                     # OASP4J server
 ----
 
 If everything goes well, the console output will be something like this:
@@ -173,7 +173,7 @@ Alternatively, you can also run using yarn.
 
 [source,bash]
 ----
-$ yarn serve                    # OASP4J server
+$ yarn start                        # OASP4J server
 ----
 
 ===== Step 3: Test the application

@@ -6,7 +6,7 @@
 :listing-caption: Listing
 
 = Devonfw Guide
-v2.4.0
+v3.0.0
 Written by the Devonfw community. This documentation is licensed under the Creative Commons License (Attribution-NoDerivatives 4.0 International).
 
 toc::[]
@@ -243,6 +243,8 @@ include::oasp4js-angular-i18n.asciidoc[]
 include::Client-GUI-Angular-a11y-accessibility.asciidoc[]
 
 include::Client-GUI-Angular-Update-Angular-CLI.asciidoc[]
+
+include::Client-GUI-Angular-Add-Electron.asciidoc[]
 
 == Devon4Sencha
 
