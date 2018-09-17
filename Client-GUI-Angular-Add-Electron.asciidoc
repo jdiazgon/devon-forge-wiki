@@ -53,7 +53,7 @@ $ yarn add -D electron electron-builder electron-reload npm-run-all npx wait-on 
 ----
 
 === Add Electron build configuration
-It is necessary to configure electron builds properly. In order to do this a `electron-builder.json` must be included in the root folder of the application. 
+It is necessary to configure electron builds properly. In order to do this a `electron-builder.json` must be included in the root folder of the application. For more information and fine tuning please refer to the https://www.electron.build/configuration/configuration[Electron Builder official documentation].
 
 The contents of the file will be something similar to the following:
 
