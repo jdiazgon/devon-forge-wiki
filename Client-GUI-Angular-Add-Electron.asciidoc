@@ -139,7 +139,7 @@ fs.readFile(f_angular, 'utf8', function (err, data) {
 ----
 
 ==== postcss.config.js
-In case a custom _PostCSS_ configuration is required, an optional `postcss.config.js` could be included. This is only intended to change the _PostCSS_ behaviour of the previous `postinstall` scripts, but in most cases will not be necessary. For that reason in My thai Star there is a minimum file configuration that indeed does not nothing:
+In case a custom _PostCSS_ configuration is required, an optional `postcss.config.js` could be included. This is only intended to change the _PostCSS_ behaviour of the previous `postinstall` scripts, but in most cases will not be necessary. For that reason in My thai Star there is a minimum file configuration that indeed does nothing:
 
 [source, JavaScript]
 ----
@@ -198,6 +198,23 @@ export class ElectronService {
 }
 ----
 
+==== Update `app.module.ts`
+As an example the `electron.service.ts` and `webview.directive.ts` files are located inside a `shared` module:
+
+[source,TypeScript]
+----
+// imports
+import { ElectronService } from './shared/electron/electron.service';
+import { WebviewDirective } from './shared/directives/webview.directive';
+
+@NgModule({
+  declarations: [AppComponent, WebviewDirective],
+  imports: [...],
+  providers: [ElectronService],
+  bootstrap: [AppComponent],
+})
+export class AppModule {}
+----
 
 ==== Usage
 In order to use Electron in any component class the `electron.service.ts` must be injected:
