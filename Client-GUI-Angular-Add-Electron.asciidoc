@@ -14,14 +14,14 @@ NOTE: At the moment of this writing Angular 6.1.x and Electron 2.0.8 were the ve
 Here are the steps to achieve this goal. Follow them in order. 
 
 === Add Electron and other relevant dependencies
-There are two different approaches to do this as in any project with a `package.json` file: 
+There are two different approaches to add the dependencies in the `package.json` file: 
 
-* Adding the dependencies directly in that file.
+* Writing the dependencies directly in that file.
 * Installing using `npm install` or `yarn add`. 
 
 IMPORTANT: Remember if the project has a `package-lock.json` or `yarn.lock` file use `npm` or `yarn` respectively.
 
-In order to add the dependencies directly in the `package.json` file ass the following lines in the `devDependencies` section:
+In order to add the dependencies directly in the `package.json` file, include the following lines in the `devDependencies` section:
 
 [source, json]
 ----
@@ -147,7 +147,7 @@ module.exports = {};
 ----
 
 === Add Angular Electron services and directives
-In order to use Electron's webview tag and its methods inside Angular application our project needs to Angular specific files: the directive `webview.directive.ts` and the service `electron.service.ts`. We recommend to create this files inside a **shared** module folder, although they have to be declared inside the main module `app.module.ts`.
+In order to use Electron's webview tag and its methods inside Angular application our project needs two Angular specific files: the directive `webview.directive.ts` and the service `electron.service.ts`. We recommend to create this files inside a **shared** module folder, although they have to be declared inside the main module `app.module.ts`.
 
 ==== webview.directive.ts
 [source,TypeScript]
