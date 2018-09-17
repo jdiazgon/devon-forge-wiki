@@ -7,7 +7,7 @@ toc::[]
 :listing-caption: Listing
 
 == Add Electron to an Angular application
-This cookbook recipe explains how to integrate Electron in an Angular 6 application. https://electronjs.org/[Electron] is a framework for creating native applications with web technologies like JavaScript, HTML, and CSS. As an example very well known applications as Visual Studio Code, Atom, Slack or Skype (and many more) are using Electron too. 
+This cookbook recipe explains how to integrate Electron in an Angular 6 application. https://electronjs.org/[Electron] is a framework for creating native applications with web technologies like JavaScript, HTML, and CSS. As an example, very well known applications as Visual Studio Code, Atom, Slack or Skype (and many more) are using Electron too. 
 
 NOTE: At the moment of this writing Angular 6.1.x and Electron 2.0.8 were the versions available. 
 
@@ -199,7 +199,7 @@ export class ElectronService {
 ----
 
 ==== Update `app.module.ts`
-As an example the `electron.service.ts` and `webview.directive.ts` files are located inside a `shared` module:
+As an example, the `electron.service.ts` and `webview.directive.ts` files are located inside a `shared` module:
 
 [source,TypeScript]
 ----
