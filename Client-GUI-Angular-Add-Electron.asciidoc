@@ -19,7 +19,7 @@ There are two different approaches to add the dependencies in the `package.json`
 * Writing the dependencies directly in that file.
 * Installing using `npm install` or `yarn add`. 
 
-IMPORTANT: Remember if the project has a `package-lock.json` or `yarn.lock` file use `npm` or `yarn` respectively.
+IMPORTANT: Please remember if the project has a `package-lock.json` or `yarn.lock` file use `npm` or `yarn` respectively.
 
 In order to add the dependencies directly in the `package.json` file, include the following lines in the `devDependencies` section:
 
