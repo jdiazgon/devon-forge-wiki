@@ -10,7 +10,7 @@ toc::[]
 
 When you are developing the Javascript or Angular client separately from the server application, you usually have to deal with cross domain issues. Ajax requests for data are made to a target domain distinct to the original domain where the application code was loaded, and the browser does not allow this.
 
-For devon4ng (Angular), you need to enable on the server side the following property:
+For devon4ng (Angular frontend), you need to enable on the server side the following property:
 
 * Inside _<your-server-name>\core\src\main\resources\application.properties_ check whether the following propery is already present and set to true `security.cors.enabled=true`. If not, please add it.
 
