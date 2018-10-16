@@ -177,7 +177,7 @@
 
 ==== Cookbook
 
-- link:Client-GUI-Sencha-cors[CORS and Protection against Cross Site Scripting]
+- link:Client-GUI-cors[CORS and Protection against Cross Site Scripting]
 - link:Client-GUI-Sencha-security[Security]
 - link:Client-GUI-Sencha-theming[Sencha Theming]
 - link:Client-GUI-Sencha-error-processing[Error Processing]
